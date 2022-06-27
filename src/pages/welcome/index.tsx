@@ -6,13 +6,13 @@ export default function Welcome() {
     <>
       <Head>
         <title>GCB Investimentos</title>
-        <meta name="description" content="A Grupo GCB Register Page" />
+        <meta name="description" content="A Grupo GCB Welcome Page" />
         <meta property="og:title" content="GCB Investimentos" />
-        <meta property="og:description" content="A Grupo GCB Register Page" />
-        <meta property="og:url" content="http://localhost:3000" />
+        <meta property="og:description" content="A Grupo GCB Welcome Page" />
+        <meta property="og:url" content="http://localhost:3000/welcome" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>{" "}
+      </Head>
       <div>Seja bem vindo!</div>
     </>
   );
