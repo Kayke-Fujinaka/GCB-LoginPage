@@ -13,7 +13,7 @@ export default function Register() {
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>Registro</div>
+      <div><p>Oi, Cara</p></div>
     </>
   );
 }

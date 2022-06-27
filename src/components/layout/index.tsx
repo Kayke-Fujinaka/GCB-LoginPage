@@ -18,11 +18,11 @@ export function Layout({ children, title, description, url }: LayoutProps) {
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./favicon.ico" />
       </Head>
-      <S.Container>
-        <S.Wrapper>{children}</S.Wrapper>
-      </S.Container>
+      <S.Main>
+        <div className="wrapper">{children}</div>
+      </S.Main>
     </>
   );
 }
