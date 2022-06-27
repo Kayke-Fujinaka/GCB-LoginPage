@@ -1,5 +1,19 @@
 import React from "react";
+import Head from "next/head";
 
 export default function Welcome() {
-  return <div>Seja bem vindo!</div>;
+  return (
+    <>
+      <Head>
+        <title>GCB Investimentos</title>
+        <meta name="description" content="A Grupo GCB Register Page" />
+        <meta property="og:title" content="GCB Investimentos" />
+        <meta property="og:description" content="A Grupo GCB Register Page" />
+        <meta property="og:url" content="http://localhost:3000" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>{" "}
+      <div>Seja bem vindo!</div>
+    </>
+  );
 }
