@@ -1,9 +1,7 @@
 const colors = {
-  white: "#ffffff",
-  white2: "#EFEFEF",
-  black: "#121212",
-
-  bg: "#FFEBD6",
+  primaryColor: "#423B32",
+  secondColor: "#ffffff", // Opacity 56%
+  label: "#8B6B4A",
 };
 
 const fonts = {
@@ -15,13 +13,13 @@ const fonts = {
     bolder: 600,
     boldest: 700,
   },
-  primary: '"Outfit", Roboto, sans-serif',
-  secondary: '"Montserrat", Roboto, sans-serif',
+  primary: '"Outfit", Poppins, sans-serif',
+  secondary: '"Outfit", Roboto, sans-serif',
 };
 
 const theme = {
   fonts,
-  background: colors.black,
+  background: "#FFEBD6",
   ...colors,
 };
 
