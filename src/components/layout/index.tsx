@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-
+import * as S from "./styles";
 interface LayoutProps {
   children: React.ReactNode;
   title: string;
@@ -12,15 +12,17 @@ export function Layout({ children, title, description, url }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>GCB Investimentos - {title}</title>
-        <meta name="description" content={description + " Page"} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta property="og:title" content="GCB Investimentos" />
-        <meta property="og:description" content={description + " Page"} />
-        <meta property="og:url" content={"http://localhost:3000/" + url} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>{children}</div>
+      <S.Container>
+        <S.Wrapper>{children}</S.Wrapper>
+      </S.Container>
     </>
   );
 }
