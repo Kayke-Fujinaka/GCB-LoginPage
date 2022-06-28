@@ -5,10 +5,7 @@ export const Main = styled.main`
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background-color: ${theme.background};
-  background-image: url("./background.svg");
-  background-position: right;
-  background-repeat: no-repeat;
+  background: url("./background.svg") ${theme.background} right no-repeat;
   background-size: 67.5vh;
   @media (max-width: 900px) {
     background-color: ${theme.primaryColor};
@@ -17,6 +14,6 @@ export const Main = styled.main`
     display: flex;
     justify-content: left;
     width: 100%;
-    margin-left: 5rem;
+    margin-left: 4.5rem;
   }
 `;

@@ -13,14 +13,16 @@ export function Content() {
       </h1>
 
       <p>
-        A <strong>curiosidade</strong> de descobrir
+        A <span>curiosidade</span> de descobrir
         <br />
-        essa resposta é o que <strong>nos</strong>
+        essa resposta é o que <span>nos</span>
         <br />
-        <strong>move</strong> no dia-a-dia
+        <span>move</span> no dia-a-dia
       </p>
 
-      <Image src={logo} alt="GCB Logo" width={300} height={120} />
+      <div>
+        <Image src={logo} alt="GCB Logo" width={325} height={120} />
+      </div>
     </S.Container>
   );
 }

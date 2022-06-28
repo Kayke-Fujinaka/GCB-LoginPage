@@ -1,14 +1,14 @@
 import React from "react";
 import Head from "next/head";
 import * as S from "./styles";
-interface LayoutProps {
+interface ContainerProps {
   children: React.ReactNode;
   title: string;
   description: string;
   url: string;
 }
 
-export function Layout({ children, title, description, url }: LayoutProps) {
+export function Container({ children, title, description, url }: ContainerProps) {
   return (
     <>
       <Head>
