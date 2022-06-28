@@ -1,6 +1,6 @@
 import React from "react";
-import { Content } from "../components/content";
-import { Container } from "../components/container";
+import { Content } from "../components/Content";
+import { Container } from "../components/Container";
 
 export default function Login() {
   return (

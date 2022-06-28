@@ -2,10 +2,10 @@ import * as S from "./styles"
 
 export const Heading = () => {
   return (
-    <S.Heading1>
+    <S.Heading>
       Até onde conseguimos
       <br />
       chegar?
-    </S.Heading1>
+    </S.Heading>
   );
 };
