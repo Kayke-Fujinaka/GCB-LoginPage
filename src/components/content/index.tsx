@@ -3,7 +3,7 @@ import Image from "next/image";
 import * as S from "./styles";
 import logo from "../../../public/gcb-desktop.svg";
 
-export function Content() {
+export const Content = () => {
   return (
     <S.Container>
       <h1>

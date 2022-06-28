@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { Button } from "../../components/button";
 
 export default function Register() {
   return (
@@ -13,9 +14,7 @@ export default function Register() {
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <p>Oi, Cara</p>
-      </div>
+      <Button>Entrar</Button>
     </>
   );
 }

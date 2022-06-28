@@ -8,7 +8,7 @@ interface ContainerProps {
   url: string;
 }
 
-export function Container({ children, title, description, url }: ContainerProps) {
+export const Container = ({ children, title, description, url }: ContainerProps) => {
   return (
     <>
       <Head>
