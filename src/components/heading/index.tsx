@@ -1,5 +1,11 @@
-import * as S from "./styles";
+import * as S from "./styles"
 
 export const Heading = () => {
-  return <S.Heading1></S.Heading1>;
+  return (
+    <S.Heading1>
+      Até onde conseguimos
+      <br />
+      chegar?
+    </S.Heading1>
+  );
 };

@@ -1,15 +1,13 @@
 import React from "react";
 import * as S from "./styles";
+import { Heading } from "../heading";
 import { Logo } from "../logo";
 
 export const Content = () => {
   return (
     <S.Container>
-      <h1>
-        Até onde conseguimos
-        <br />
-        chegar?
-      </h1>
+
+      <Heading />
 
       <p>
         A <span>curiosidade</span> de descobrir
