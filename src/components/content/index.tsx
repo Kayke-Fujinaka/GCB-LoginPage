@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import * as S from "./styles";
-import logo from "../../../public/gcb-desktop.svg";
+import { Logo } from "../logo";
 
 export const Content = () => {
   return (
@@ -20,9 +19,12 @@ export const Content = () => {
         <span>move</span> no dia-a-dia
       </p>
 
-      <div>
-        <Image src={logo} alt="GCB Logo" width={325} height={120} />
-      </div>
+        <Logo
+          src={"/logo-desktop.svg"}
+          alt="GCB Logo Desktop"
+          width={325}
+          height={120}
+        />
     </S.Container>
   );
-}
+};

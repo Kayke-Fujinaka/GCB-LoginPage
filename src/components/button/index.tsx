@@ -5,5 +5,5 @@ interface ButtonProps {
   }
 
 export const Button = ({ children }: ButtonProps) => {
-  return <S.Container>{children}</S.Container>;
+  return <S.Button>{children}</S.Button>;
 };
