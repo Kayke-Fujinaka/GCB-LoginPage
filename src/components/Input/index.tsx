@@ -1,23 +1,25 @@
 import * as S from "./styles";
 
 interface InputProps {
-  children: React.ReactNode;
+  name: string;
+  type: string;
+  autoComplete: string;
+  label: string;
+  htmlFor: string;
 }
 
-export const Input = ({ children }: InputProps) => {
+export const Input = ({
+  name,
+  type,
+  autoComplete,
+  label,
+  htmlFor,
+}: InputProps) => {
   return (
     <>
       <S.Container>
-        <input type="text" autoComplete="off" required />
-        <span>Email</span>
-      </S.Container>
-      <S.Container>
-        <input type="text" autoComplete="off" required />
-        <span>Nome</span>
-      </S.Container>
-      <S.Container>
-        <input type="text" autoComplete="off" required />
-        <span>Senha</span>
+        <input name={name} type={type} autoComplete={autoComplete} required />
+        <label htmlFor={htmlFor}>{label}</label>
       </S.Container>
     </>
   );

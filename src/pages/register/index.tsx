@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 
 export default function Register() {
@@ -15,7 +14,7 @@ export default function Register() {
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Input />
+      <Input name="email" type="text" autoComplete="off" htmlFor="email" label="Email" />
     </>
   );
 }

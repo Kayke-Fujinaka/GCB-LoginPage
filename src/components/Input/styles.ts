@@ -3,7 +3,7 @@ import theme from "../../styles/theme";
 
 export const Container = styled.div`
   position: relative;
-  margin: 10rem 4rem;
+  margin: 7.5rem;
 
   input {
     width: 100%;
@@ -15,15 +15,15 @@ export const Container = styled.div`
     border-bottom: 0.1rem solid #423b32;
     outline: none;
 
-    :focus + span,
-    :valid + span {
+    :focus + label,
+    :valid + label {
       transform: translateY(-45px);
       font-size: 3rem;
       color: ${theme.label};
     }
   }
 
-  span {
+  label {
     position: absolute;
     left: 0;
     top: 0.5rem;
