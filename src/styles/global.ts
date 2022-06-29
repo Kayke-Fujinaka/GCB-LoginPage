@@ -7,7 +7,6 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        text-decoration: none;
     }
 
     :root {
@@ -30,7 +29,7 @@ export default createGlobalStyle`
     }
 
     a {
-        text-decoration: none;
+        color: ${theme.primaryColor};
         cursor: pointer;
     }
 
