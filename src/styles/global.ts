@@ -8,7 +8,6 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         text-decoration: none;
-        font-family: ${theme.fonts.primary};
     }
 
     :root {
@@ -18,10 +17,21 @@ export default createGlobalStyle`
     html, body {
         width: 100%;
         height: 100%;
+        font-family: ${theme.fonts.primary};
+        background: ${theme.background};
+    }
+
+    h1 {
+        font-weight: ${theme.fonts.weight.bold};
     }
 
     ul {
         list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
     }
 
     button {

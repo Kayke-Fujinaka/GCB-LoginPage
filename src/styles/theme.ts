@@ -1,6 +1,6 @@
 const colors = {
   primaryColor: "#423B32",
-  secondColor: "rgba(255, 255, 255, 0.56);", // Opacity 56%
+  secondColor: "#FFFFFF;", // Opacity 56%
   label: "#8B6B4A",
   button: "#F5CA9C",
 };
@@ -16,7 +16,8 @@ const fonts = {
 
 const theme = {
   fonts,
-  background: "#FFEBD6",
+  background:
+    "linear-gradient(90deg, rgba(255,235,214,1) 60%, rgba(66,59,50,1) 60%)",
   ...colors,
 };
 
