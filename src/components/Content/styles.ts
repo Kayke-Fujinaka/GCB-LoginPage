@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5rem;
+  gap: 10rem;
   color: ${theme.primaryColor};
   @media (max-width: 900px) {
     display: none;
