@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   gap: 10rem;
   color: ${theme.primaryColor};
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     display: none;
   }
   p {
