@@ -10,4 +10,8 @@ export const Container = styled.div`
   border-radius: 1rem;
   background-color: ${theme.secondColor};
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
+
+  .containerText {
+    margin-block: 2rem 5rem;
+  }
 `;

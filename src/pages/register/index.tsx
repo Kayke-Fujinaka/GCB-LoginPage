@@ -1,20 +1,18 @@
-import React from "react";
-import Head from "next/head";
-import { Form } from "../../components/Form";
+import { Container } from "../../components/Container";
+import { Content } from "../../components/Content";
+import { RegisterForm } from "../../components/RegisterForm";
 
 export default function Register() {
   return (
     <>
-      <Head>
-        <title>GCB Investimentos</title>
-        <meta name="description" content="A Grupo GCB Register Page" />
-        <meta property="og:title" content="GCB Investimentos" />
-        <meta property="og:description" content="A Grupo GCB Register Page" />
-        <meta property="og:url" content="http://localhost:3000/register" />
-        <meta property="og:type" content="website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Form />
+      <Container
+        title="GCB Investimentos - Register"
+        description="Register Page"
+        url="http://localhost:3000/register"
+      >
+        <Content />
+        <RegisterForm />
+      </Container>
     </>
   );
 }

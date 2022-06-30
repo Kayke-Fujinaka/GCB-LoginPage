@@ -4,10 +4,9 @@ import theme from "../../styles/theme";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  margin-block: 1.5rem 5rem;
 
   input[type="checkbox"] {
-    opacity: 0.5;
+    opacity: 0;
     position: absolute;
     margin-left: 0.2rem;
   }
