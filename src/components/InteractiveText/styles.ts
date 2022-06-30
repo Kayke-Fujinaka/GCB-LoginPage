@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
 
-export const Hyperlink = styled.p`
+export const InteractiveText = styled.p`
   margin: 0 7.5rem;
 
   width: 100%;

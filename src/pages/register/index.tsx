@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Input } from "../../components/Input";
-import { Hyperlink } from "../../components/Hyperlink";
+import { InteractiveText } from "../../components/InteractiveText";
 import { Button } from "../../components/Button";
 
 export default function Register() {
@@ -37,9 +37,7 @@ export default function Register() {
         htmlFor="password"
         label="Senha"
       />
-      <Hyperlink>
-        Eu li e aceito os <a href="#">Termos e Condições</a>
-      </Hyperlink>
+      <InteractiveText text="Eu li e aceito os " hyperlink="Termos e Condições" />
       <Button>Cadastrar</Button>
     </>
   );
