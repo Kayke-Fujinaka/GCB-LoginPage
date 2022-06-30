@@ -4,8 +4,6 @@ import { Heading } from "../Heading";
 import { Paragraph } from "../Paragraph";
 import { Logo } from "../Logo";
 
-// TIrar
-
 export const Content = () => {
   return (
     <S.Container>

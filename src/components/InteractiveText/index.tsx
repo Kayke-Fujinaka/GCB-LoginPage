@@ -7,9 +7,11 @@ type InteractiveTextProps = {
 
 export const InteractiveText = (props: InteractiveTextProps) => {
   return (
-    <S.InteractiveText>
-      {props.text}
-      <a href="#">{props.hyperlink}</a>
-    </S.InteractiveText>
+    <>
+        <S.InteractiveText>
+          {props.text}
+          <a href="#">{props.hyperlink}</a>
+        </S.InteractiveText>
+    </>
   );
 };

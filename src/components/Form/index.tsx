@@ -1,5 +1,6 @@
 import * as S from "./styles";
 import { Input } from "../../components/Input";
+import { CheckBox } from "../../components/CheckBox";
 import { InteractiveText } from "../../components/InteractiveText";
 import { Button } from "../../components/Button";
 
@@ -27,10 +28,7 @@ export const Form = () => {
         htmlFor="password"
         label="Senha"
       />
-      <InteractiveText
-        text="Eu li e aceito os "
-        hyperlink="Termos e Condições"
-      />
+        <CheckBox type="checkbox" />
       <Button>Cadastrar</Button>
     </S.Container>
   );
