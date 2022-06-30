@@ -11,6 +11,8 @@ export const Main = styled.main`
   }
   .wrapper {
     display: flex;
-    padding-left: 4.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
   }
 `;

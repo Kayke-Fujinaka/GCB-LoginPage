@@ -3,11 +3,11 @@ import theme from "../../styles/theme";
 
 export const Container = styled.div`
   position: relative;
-  margin: 7.5rem;
+  margin-top: 5rem;
 
   input {
     width: 100%;
-    height: 4.5rem;
+    height: 4rem;
     font-size: 2rem;
     font-weight: ${theme.fonts.weight.normal};
     color: ${theme.primaryColor};
@@ -17,8 +17,8 @@ export const Container = styled.div`
 
     :focus + label,
     :valid + label {
-      transform: translateY(-45px);
-      font-size: 3rem;
+      transform: translateY(-35px);
+      font-size: 2.5rem;
       color: ${theme.label};
     }
   }
@@ -29,7 +29,7 @@ export const Container = styled.div`
     top: 0.5rem;
     pointer-events: none;
     transition: 0.5s;
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: ${theme.primaryColor};
   }
 `;

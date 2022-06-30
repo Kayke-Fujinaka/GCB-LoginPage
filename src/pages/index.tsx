@@ -1,6 +1,7 @@
 import React from "react";
-import { Content } from "../components/Content";
 import { Container } from "../components/Container";
+import { Content } from "../components/Content";
+import { Form } from "../components/Form";
 
 export default function Login() {
   return (
@@ -11,6 +12,7 @@ export default function Login() {
         url="http://localhost:3000/"
       >
         <Content />
+        <Form />
       </Container>
     </>
   );
