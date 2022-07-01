@@ -25,10 +25,16 @@ export const Container = styled.div`
       border-radius: 0.15em;
       margin-right: 0.5em;
       border: 0.1em solid black;
+      @media (max-width: 900px) {
+        border: 0.1em solid white;
+    }
     }
   }
 
   input[type="checkbox"]:checked + label::before {
     background-color: ${theme.primaryColor};
+    @media (max-width: 900px) {
+      background-color: ${theme.secondColor};
+    }
   }
 `;

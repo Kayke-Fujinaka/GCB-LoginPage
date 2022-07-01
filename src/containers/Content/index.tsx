@@ -1,8 +1,8 @@
 import React from "react";
 import * as S from "./styles";
-import { Heading } from "../Heading";
-import { Paragraph } from "../Paragraph";
-import { Logo } from "../Logo";
+import { Heading } from "../../components/Heading";
+import { Paragraph } from "../../components/Paragraph";
+import { Logo } from "../../components/Logo";
 
 export const Content = () => {
   return (

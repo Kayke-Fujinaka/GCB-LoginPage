@@ -1,5 +1,5 @@
-import { Container } from "../../components/Container";
-import { Content } from "../../components/Content";
+import { Container } from "../../containers/Container";
+import { Content } from "../../containers/Content";
 import { RegisterForm } from "../../components/RegisterForm";
 
 export default function Register() {

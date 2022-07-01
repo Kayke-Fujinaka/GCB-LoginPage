@@ -20,6 +20,18 @@ export const Container = styled.div`
       transform: translateY(-30px);
       font-size: 2rem;
       color: ${theme.label};
+      @media (max-width: 900px) {
+        top: 50%;
+        left: 47.5%;
+        margin: -25px 0 0 -25px;
+        color: ${theme.button};
+      }
+    }
+
+    @media (max-width: 900px) {
+      border-bottom: 1.25px solid ${theme.secondColor};
+      background: none;
+      color: ${theme.secondColor};
     }
   }
 
@@ -31,5 +43,8 @@ export const Container = styled.div`
     transition: 0.5s;
     font-size: 1.85rem;
     color: ${theme.primaryColor};
+    @media (max-width: 900px) {
+      color: ${theme.secondColor};
+    }
   }
 `;

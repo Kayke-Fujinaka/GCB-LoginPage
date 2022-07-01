@@ -9,7 +9,13 @@ export const Container = styled.div`
   padding: 2.5rem 3rem;
   border-radius: 1rem;
   background-color: ${theme.secondColor};
-  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.4rem 0.3rem rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 900px) {
+    background: white;
+    min-height: 620px;
+    box-shadow: none;
+  }
 
   .containerText {
     margin-block: 2rem 5rem;

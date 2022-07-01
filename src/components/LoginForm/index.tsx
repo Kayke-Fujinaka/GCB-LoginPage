@@ -1,4 +1,4 @@
-import { Form } from "../Form";
+import { Form } from "../../containers/Form";
 import { Input } from "../Input";
 import { InteractiveText } from "../InteractiveText";
 import { Button } from "../Button";
