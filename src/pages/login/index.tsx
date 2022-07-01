@@ -1,5 +1,5 @@
-import { Container } from "../../containers/Container";
-import { Content } from "../../containers/Content";
+import { Container } from "../../components/Container";
+import { Content } from "../../components/Content";
 import { LoginForm } from "../../components/LoginForm";
 export default function Login() {
   return (

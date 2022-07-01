@@ -1,7 +1,8 @@
-import { Form } from "../../containers/Form";
+import { Form } from "../Form";
 import { Input } from "../Input";
 import { InteractiveText } from "../InteractiveText";
 import { Button } from "../Button";
+import theme from "../../styles/theme";
 
 export const LoginForm = () => {
   return (
@@ -27,7 +28,7 @@ export const LoginForm = () => {
           link="http://localhost:3000/register"
         />
       </div>
-      <Button>Entrar</Button>
+      <Button type="button" bgColor={theme.primaryColor} color={theme.button}>Entrar</Button>
     </Form>
   );
 };

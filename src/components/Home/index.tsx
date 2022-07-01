@@ -1,4 +1,4 @@
-import { Form } from "../../containers/Form";
+import { Form } from "../Form";
 
 export const Home = () => {
   return (

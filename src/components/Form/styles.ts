@@ -12,9 +12,16 @@ export const Container = styled.div`
   box-shadow: 0 0.4rem 0.3rem rgba(0, 0, 0, 0.5);
 
   @media (max-width: 900px) {
-    background: white;
+    background: none;
     min-height: 620px;
     box-shadow: none;
+  }
+
+  .logo {
+    display: none;
+    @media (max-width: 900px) {
+      display: block;
+    }
   }
 
   .containerText {

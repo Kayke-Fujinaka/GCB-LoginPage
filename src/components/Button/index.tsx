@@ -1,13 +1,12 @@
 import * as S from "./styles";
 
-interface ButtonProps {
-    children: React.ReactNode;
-  }
+export interface ButtonProps {
+  children: React.ReactNode;
+  type?: "button" | "submit";
+  bgColor?: string;
+  color?: string;
+}
 
-export const Button = ({ children }: ButtonProps) => {
-  return (
-    <>
-    <S.Button>{children}</S.Button>
-    </>
-  );
-};
+export function Button({ children, type, bgColor, color }: ButtonProps) {
+  return <S.Button bgColor={bgColor} color={color} type={type}>{children}</S.Button>;
+}

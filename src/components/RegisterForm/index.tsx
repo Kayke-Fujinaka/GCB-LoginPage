@@ -1,7 +1,8 @@
-import { Form } from "../../containers/Form";
+import { Form } from "../Form";
 import { Input } from "../Input";
 import { CheckBox } from "../CheckBox";
 import { Button } from "../Button";
+import theme from "../../styles/theme";
 
 export const RegisterForm = () => {
   return (
@@ -30,7 +31,7 @@ export const RegisterForm = () => {
       <div className="containerText">
         <CheckBox type="checkbox" />
       </div>
-      <Button>Cadastrar</Button>
+      <Button type="submit"  bgColor={theme.primaryColor} color={theme.button}>Cadastrar</Button>
     </Form>
   );
 };
