@@ -11,7 +11,11 @@ export const CheckBox = ({ type }: CheckBoxProps) => {
       <S.Container>
         <input type={type} />
         <label>
-          <InteractiveText text="Eu li e aceito os " hyperlink="Termos de Uso" link="#" />
+          <InteractiveText
+            text="Eu li e aceito os "
+            hyperlink="Termos de Uso"
+            link="#"
+          />
         </label>
       </S.Container>
     </>

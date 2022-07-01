@@ -8,21 +8,21 @@ interface ContainerProps {
   url: string;
 }
 
-export const Container = ({ children, title, description, url }: ContainerProps) => {
+export const Container = (props: ContainerProps) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{props.title}</title>
+        <meta name="description" content={props.description} />
         <meta property="og:title" content="GCB Investimentos" />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={url} />
+        <meta property="og:description" content={props.description} />
+        <meta property="og:url" content={props.url} />
         <meta property="og:type" content="website" />
         <link rel="icon" href="./favicon.ico" />
       </Head>
       <S.Main>
-        <div className="wrapper">{children}</div>
+        <div className="wrapper">{props.children}</div>
       </S.Main>
     </>
   );
-}
+};

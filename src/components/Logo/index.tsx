@@ -7,10 +7,15 @@ export interface LogoProps {
   height?: number;
 }
 
-export const Logo = ({ src, alt, width, height }: LogoProps) => {
+export const Logo = (props: LogoProps) => {
   return (
     <div>
-      <Image src={src} alt={alt} width={width} height={height} />
+      <Image
+        src={props.src}
+        alt={props.alt}
+        width={props.width}
+        height={props.height}
+      />
     </div>
   );
 };

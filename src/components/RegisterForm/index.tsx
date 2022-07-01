@@ -31,7 +31,9 @@ export const RegisterForm = () => {
       <div className="containerText">
         <CheckBox type="checkbox" />
       </div>
-      <Button type="submit"  bgColor={theme.primaryColor} color={theme.button}>Cadastrar</Button>
+      <Button type="submit" bgColor={theme.primaryColor} color={theme.button}>
+        Cadastrar
+      </Button>
     </Form>
   );
 };

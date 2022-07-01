@@ -8,18 +8,17 @@ interface InputProps {
   htmlFor: string;
 }
 
-export const Input = ({
-  name,
-  type,
-  autoComplete,
-  label,
-  htmlFor,
-}: InputProps) => {
+export const Input = (props: InputProps) => {
   return (
     <>
       <S.Container>
-        <input name={name} type={type} autoComplete={autoComplete} required />
-        <label htmlFor={htmlFor}>{label}</label>
+        <input
+          name={props.name}
+          type={props.type}
+          autoComplete={props.autoComplete}
+          required
+        />
+        <label htmlFor={props.htmlFor}>{props.label}</label>
       </S.Container>
     </>
   );

@@ -7,6 +7,10 @@ export interface ButtonProps {
   color?: string;
 }
 
-export function Button({ children, type, bgColor, color }: ButtonProps) {
-  return <S.Button bgColor={bgColor} color={color} type={type}>{children}</S.Button>;
+export function Button(props: ButtonProps) {
+  return (
+    <S.Button bgColor={props.bgColor} color={props.color} type={props.type}>
+      {props.children}
+    </S.Button>
+  );
 }

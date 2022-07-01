@@ -28,7 +28,9 @@ export const LoginForm = () => {
           link="http://localhost:3000/register"
         />
       </div>
-      <Button type="button" bgColor={theme.primaryColor} color={theme.button}>Entrar</Button>
+      <Button type="button" bgColor={theme.primaryColor} color={theme.button}>
+        Entrar
+      </Button>
     </Form>
   );
 };
