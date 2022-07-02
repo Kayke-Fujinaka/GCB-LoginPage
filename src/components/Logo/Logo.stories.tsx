@@ -3,7 +3,7 @@ import { Logo, LogoProps } from ".";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 export default {
-  title: "Logos/Logos",
+  title: "Logos/Logo",
   component: Logo,
   argTypes: {
     checked: {
