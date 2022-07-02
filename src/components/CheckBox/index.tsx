@@ -1,15 +1,26 @@
 import * as S from "./styles";
 import { InteractiveText } from "../InteractiveText";
 
-interface CheckBoxProps {
+export interface CheckBoxProps {
+  id: string;
+  name: string;
+  checked: boolean;
   type: string;
+  htmlFor: string;
+  required?: boolean;
 }
 
-export const CheckBox = ({ type }: CheckBoxProps) => {
+export const CheckBox = (props: CheckBoxProps) => {
   return (
     <>
       <S.Container>
-        <input type={type} />
+        <input
+          id={props.id}
+          name={props.name}
+          type={props.type}
+          checked={props.checked}
+          required={props.required}
+        />
         <label>
           <InteractiveText
             text="Eu li e aceito os "

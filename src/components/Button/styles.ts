@@ -15,12 +15,16 @@ export const Button = styled.button<ButtonProps>`
   font-family: ${theme.fonts.primary};
   color: ${(props) => props.color};
   background: ${(props) => props.bgColor};
-  border: none;
+  border: 1px solid ${theme.primaryColor};
   border-radius: 1rem;
   transition: 0.5s;
 
   :hover {
-    background-color: #2e2923;
+    filter: contrast(115%);
+  }
+
+  :active {
+    filter: brightness(0.95);
   }
 
   @media (max-width: 900px) {

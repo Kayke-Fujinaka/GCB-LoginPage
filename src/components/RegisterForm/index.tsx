@@ -29,7 +29,14 @@ export const RegisterForm = () => {
         label="Senha"
       />
       <div className="containerText">
-        <CheckBox type="checkbox" />
+        <CheckBox
+          id="terms"
+          name="terms"
+          type="checkbox"
+          htmlFor="terms"
+          required
+          checked={false}
+        />
       </div>
       <Button type="submit" bgColor={theme.primaryColor} color={theme.button}>
         Cadastrar
