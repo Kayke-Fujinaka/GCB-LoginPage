@@ -1,6 +1,6 @@
 import * as S from "./styles";
 
-type InteractiveTextProps = {
+export type InteractiveTextProps = {
   text: string;
   hyperlink: string;
   link: string;
