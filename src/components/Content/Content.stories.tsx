@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Story, ComponentMeta } from "@storybook/react";
 import { Content } from ".";
 
 export default {
@@ -6,6 +6,6 @@ export default {
   component: Content,
 } as ComponentMeta<typeof Content>;
 
-const Template: ComponentStory<typeof Content> = (args) => <Content />;
+const Template: Story<typeof Content> = (args) => <Content />;
 
 export const ContentDesktop = Template.bind({});
