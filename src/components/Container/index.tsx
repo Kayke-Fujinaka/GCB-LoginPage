@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import * as S from "./styles";
-interface ContainerProps {
+export interface ContainerProps {
   children: React.ReactNode;
   title: string;
   description: string;
