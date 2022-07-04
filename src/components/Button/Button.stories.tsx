@@ -39,6 +39,15 @@ ButtonDesktop.args = {
 ButtonDesktop.parameters = {
   backgrounds: { default: "desktop" },
 };
+ButtonDesktop.decorators = [
+  (Story) => {
+    return (
+      <div style={{ display: "flex", justifyContent: "center", height: "30rem", alignItems: "center" }}>
+        <Story />
+      </div>
+    );
+  },
+];
 
 export const ButtonMobile = Template.bind({});
 ButtonMobile.args = {
@@ -52,3 +61,12 @@ ButtonMobile.parameters = {
   },
   backgrounds: { default: "mobile" },
 };
+ButtonMobile.decorators = [
+  (Story) => {
+    return (
+      <div style={{ display: "flex", justifyContent: "center", height: "30rem", alignItems: "center" }}>
+        <Story />
+      </div>
+    );
+  },
+];
