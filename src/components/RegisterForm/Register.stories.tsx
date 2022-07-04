@@ -31,6 +31,24 @@ export const RegisterFormDesktop = Template.bind({});
 RegisterFormDesktop.parameters = {
   backgrounds: { default: "desktop" },
 };
+RegisterFormDesktop.decorators = [
+  (Story) => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "30rem",
+          alignItems: "center",
+          paddingTop: "30rem",
+        }}
+      >
+        <Story />
+      </div>
+    );
+  },
+];
+
 export const RegisterFormMobile = Template.bind({});
 RegisterFormMobile.parameters = {
   viewport: {
@@ -38,3 +56,20 @@ RegisterFormMobile.parameters = {
   },
   backgrounds: { default: "mobile" },
 };
+RegisterFormMobile.decorators = [
+  (Story) => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "30rem",
+          alignItems: "center",
+          paddingTop: "20rem",
+        }}
+      >
+        <Story />
+      </div>
+    );
+  },
+];

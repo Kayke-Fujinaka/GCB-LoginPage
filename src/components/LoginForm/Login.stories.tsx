@@ -31,6 +31,24 @@ export const LoginFormDesktop = Template.bind({});
 LoginFormDesktop.parameters = {
   backgrounds: { default: "desktop" },
 };
+LoginFormDesktop.decorators = [
+  (Story) => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "30rem",
+          alignItems: "center",
+          paddingTop: "20rem"
+        }}
+      >
+        <Story />
+      </div>
+    );
+  },
+];
+
 export const LoginFormMobile = Template.bind({});
 LoginFormMobile.parameters = {
   viewport: {
@@ -38,3 +56,20 @@ LoginFormMobile.parameters = {
   },
   backgrounds: { default: "mobile" },
 };
+LoginFormMobile.decorators = [
+  (Story) => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "30rem",
+          alignItems: "center",
+          paddingTop: "20rem"
+        }}
+      >
+        <Story />
+      </div>
+    );
+  },
+];
