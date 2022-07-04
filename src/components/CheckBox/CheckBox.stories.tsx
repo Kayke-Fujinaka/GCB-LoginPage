@@ -44,6 +44,22 @@ CheckboxDesktop.args = {
 CheckboxDesktop.parameters = {
   backgrounds: { default: "desktop" },
 };
+CheckboxDesktop.decorators = [
+  (Story) => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "30rem",
+          alignItems: "center",
+        }}
+      >
+        <Story />
+      </div>
+    );
+  },
+];
 
 export const CheckboxMobile = Template.bind({});
 CheckboxMobile.args = {
@@ -60,3 +76,19 @@ CheckboxMobile.parameters = {
   },
   backgrounds: { default: "mobile" },
 };
+CheckboxMobile.decorators = [
+  (Story) => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "30rem",
+          alignItems: "center",
+        }}
+      >
+        <Story />
+      </div>
+    );
+  },
+];
