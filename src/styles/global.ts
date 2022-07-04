@@ -17,7 +17,6 @@ export default createGlobalStyle`
         width: 100%;
         height: 100%;
         font-family: ${theme.fonts.primary};
-        background: ${theme.background};
     }
 
     h1 {

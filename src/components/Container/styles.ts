@@ -6,6 +6,7 @@ export const Main = styled.main`
   min-height: 100vh;
   background: url("./background.svg") center right / 45vh no-repeat;
   z-index: 1;
+  background: ${theme.background};
   @media (max-width: 900px) {
     background-color: ${theme.primaryColor};
   }

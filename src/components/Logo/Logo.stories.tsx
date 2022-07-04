@@ -5,11 +5,6 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 export default {
   title: "Logos/Logo",
   component: Logo,
-  argTypes: {
-    checked: {
-      control: "boolean",
-    },
-  },
   parameters: {
     layout: "fullscreen",
     viewport: {
@@ -34,7 +29,7 @@ const Template: Story<LogoProps> = (args) => <Logo {...args} />;
 
 export const LogoDesktop = Template.bind({});
 LogoDesktop.args = {
-  src: "/logo_desktop.svg",
+  src: "/logo-desktop.svg",
   alt: "Logo GCB Desktop",
   height: 120,
   width: 420,
@@ -45,7 +40,7 @@ LogoDesktop.parameters = {
 
 export const LogoMobile = Template.bind({});
 LogoMobile.args = {
-  src: "/logo_desktop.svg",
+  src: "/logo-mobile.svg",
   alt: "Logo GCB Mobile",
   height: 120,
   width: 420,

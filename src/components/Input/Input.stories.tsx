@@ -19,7 +19,7 @@ export default {
       values: [
         {
           name: "desktop",
-          value: "#FFEBD6",
+          value: "#FFFFFF",
         },
         {
           name: "mobile",
@@ -49,6 +49,9 @@ InputDesktop.decorators = [
     );
   },
 ];
+InputDesktop.parameters = {
+  backgrounds: { default: "desktop" },
+};
 
 export const InputMobile = Template.bind({});
 InputMobile.args = {

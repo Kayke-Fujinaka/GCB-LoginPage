@@ -16,6 +16,7 @@ export const Input = (props: InputProps) => {
           name={props.name}
           type={props.type}
           autoComplete={props.autoComplete}
+          required
         />
         <label htmlFor={props.htmlFor}>{props.label}</label>
       </S.Container>
