@@ -3,7 +3,7 @@ import Image from "next/image";
 export interface LogoProps {
   src: string;
   alt: string;
-  width?: number;
+  width: number;
   height?: number;
 }
 

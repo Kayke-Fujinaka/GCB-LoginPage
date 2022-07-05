@@ -1,10 +1,10 @@
 import { Story, ComponentMeta } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-import { InteractiveText, InteractiveTextProps } from ".";
+import { ForwardRef, ForwardRefProps } from ".";
 
 export default {
-  title: "InteractiveTexts/InteractiveText",
-  component: InteractiveText,
+  title: "ForwardRefs/ForwardRef",
+  component: ForwardRef,
   parameters: {
     layout: "fullscreen",
     viewport: {
@@ -23,29 +23,29 @@ export default {
       ],
     },
   },
-} as ComponentMeta<typeof InteractiveText>;
+} as ComponentMeta<typeof ForwardRef>;
 
-const Template: Story<InteractiveTextProps> = (args) => (
-  <InteractiveText {...args} />
+const Template: Story<ForwardRefProps> = (args) => (
+  <ForwardRef {...args} />
 );
 
-export const InteractiveTextDesktop = Template.bind({});
-InteractiveTextDesktop.args = {
+export const ForwardRefDesktop = Template.bind({});
+ForwardRefDesktop.args = {
   text: "Você já tem uma conta? ",
   link: "#",
   hyperlink: "Entre já!",
 };
-InteractiveTextDesktop.parameters = {
+ForwardRefDesktop.parameters = {
   backgrounds: { default: "desktop" },
 };
 
-export const InteractiveTextMobile = Template.bind({});
-InteractiveTextMobile.args = {
+export const ForwardRefMobile = Template.bind({});
+ForwardRefMobile.args = {
   text: "Você já tem uma conta? ",
   link: "#",
   hyperlink: "Entre já!",
 };
-InteractiveTextMobile.parameters = {
+ForwardRefMobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },

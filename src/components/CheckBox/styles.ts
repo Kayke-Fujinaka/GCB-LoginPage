@@ -27,7 +27,7 @@ export const Container = styled.div`
       border: 0.1em solid black;
       @media (max-width: 900px) {
         border: 0.1em solid white;
-    }
+      }
     }
   }
 

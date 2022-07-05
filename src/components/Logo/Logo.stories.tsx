@@ -37,23 +37,6 @@ LogoDesktop.args = {
 LogoDesktop.parameters = {
   backgrounds: { default: "desktop" },
 };
-LogoDesktop.decorators = [
-  (Story) => {
-    return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "30rem",
-          alignItems: "center",
-          paddingTop: "20rem",
-        }}
-      >
-        <Story />
-      </div>
-    );
-  },
-];
 
 export const LogoMobile = Template.bind({});
 LogoMobile.args = {
@@ -68,20 +51,3 @@ LogoMobile.parameters = {
   },
   backgrounds: { default: "mobile" },
 };
-LogoMobile.decorators = [
-  (Story) => {
-    return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "30rem",
-          alignItems: "center",
-          paddingTop: "20rem",
-        }}
-      >
-        <Story />
-      </div>
-    );
-  },
-];

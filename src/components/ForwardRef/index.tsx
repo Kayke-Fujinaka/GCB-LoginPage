@@ -1,18 +1,18 @@
 import * as S from "./styles";
 
-export type InteractiveTextProps = {
+export interface ForwardRefProps {
   text: string;
   hyperlink: string;
   link: string;
 };
 
-export const InteractiveText = (props: InteractiveTextProps) => {
+export const ForwardRef = (props: ForwardRefProps) => {
   return (
     <>
-      <S.InteractiveText>
+      <S.ForwardRef>
         {props.text}
         <a href={props.link}>{props.hyperlink}</a>
-      </S.InteractiveText>
+      </S.ForwardRef>
     </>
   );
 };

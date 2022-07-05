@@ -1,6 +1,6 @@
 import { Container } from "../../components/Container";
 import { Content } from "../../components/Content";
-import { RegisterForm } from "../../components/RegisterForm";
+import { RegisterForm } from "../../components/Register";
 
 export default function Register() {
   return (

@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { LoginForm } from ".";
 
 export default {
-  title: "LoginForms/LoginForm",
+  title: "Login/Login",
   component: LoginForm,
   parameters: {
     layout: "fullscreen",
@@ -40,7 +40,7 @@ LoginFormDesktop.decorators = [
           justifyContent: "center",
           height: "30rem",
           alignItems: "center",
-          paddingTop: "20rem"
+          paddingTop: "20rem",
         }}
       >
         <Story />
@@ -65,7 +65,7 @@ LoginFormMobile.decorators = [
           justifyContent: "center",
           height: "30rem",
           alignItems: "center",
-          paddingTop: "20rem"
+          paddingTop: "20rem",
         }}
       >
         <Story />

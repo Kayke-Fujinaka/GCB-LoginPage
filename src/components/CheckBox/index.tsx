@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { InteractiveText } from "../InteractiveText";
+import { ForwardRef } from "../ForwardRef";
 
 export interface CheckBoxProps {
   id: string;
@@ -8,6 +8,7 @@ export interface CheckBoxProps {
   type: string;
   htmlFor: string;
   required?: boolean;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const CheckBox = (props: CheckBoxProps) => {
@@ -22,7 +23,7 @@ export const CheckBox = (props: CheckBoxProps) => {
           required={props.required}
         />
         <label>
-          <InteractiveText
+          <ForwardRef
             text="Eu li e aceito os "
             hyperlink="Termos de Uso"
             link="#"

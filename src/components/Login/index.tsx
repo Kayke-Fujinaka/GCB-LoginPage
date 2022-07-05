@@ -1,10 +1,15 @@
 import { Form } from "../Form";
 import { Input } from "../Input";
-import { InteractiveText } from "../InteractiveText";
+import { ForwardRef } from "../ForwardRef";
 import { Button } from "../Button";
 import theme from "../../styles/theme";
+import { useState } from "react";
 
 export const LoginForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
   return (
     <Form>
       <Input
@@ -13,6 +18,7 @@ export const LoginForm = () => {
         autoComplete="off"
         htmlFor="email"
         label="Email"
+        onChange={(e) => [setEmail(e.target.value), setError("")]}
       />
       <Input
         name="password"
@@ -20,9 +26,10 @@ export const LoginForm = () => {
         autoComplete="off"
         htmlFor="password"
         label="Senha"
+        onChange={(e) => [setPassword(e.target.value), setError("")]}
       />
       <div className="containerText">
-        <InteractiveText
+        <ForwardRef
           text="Não tem cadastro? "
           hyperlink="Cadastre-se agora!"
           link="http://localhost:3000/register"
