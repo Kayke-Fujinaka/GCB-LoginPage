@@ -4,11 +4,9 @@ import { ForwardRef } from "../ForwardRef";
 export interface CheckBoxProps {
   id: string;
   name: string;
-  checked: boolean;
   type: string;
   htmlFor: string;
-  required?: boolean;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 export const CheckBox = (props: CheckBoxProps) => {
@@ -19,8 +17,7 @@ export const CheckBox = (props: CheckBoxProps) => {
           id={props.id}
           name={props.name}
           type={props.type}
-          checked={props.checked}
-          required={props.required}
+          onChange={props.onChange}
         />
         <label>
           <ForwardRef
