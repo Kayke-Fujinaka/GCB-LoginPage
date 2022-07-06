@@ -1,5 +1,20 @@
 import { Form } from "../Form";
+import { Button } from "../Button";
+import theme from "../../styles/theme";
+
+let user = {
+  name: "João",
+  password: "123",
+};
 
 export const Home = () => {
-  return <Form>Seja Bem Vindo!</Form>;
+  function test() {
+    localStorage.setItem("user", JSON.stringify(user));
+  }
+  return (
+    <>
+      <Form>Seja Bem Vindo!</Form>
+      <button onClick={test}>OPADJDJSDJSNJDNSJ</button>
+    </>
+  );
 };

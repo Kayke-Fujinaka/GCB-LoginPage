@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Form } from "../Form";
 import { Input } from "../Input";
@@ -7,19 +7,17 @@ import { Button } from "../Button";
 import theme from "../../styles/theme";
 
 export const RegisterForm = () => {
-  const router = useRouter();
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  function handleSignUp() {
-    console.log(setName);
+  function handleRegister() {
+
   }
 
   return (
-    <Form onSubmit={handleSignUp}>
+    <Form onSubmit={handleRegister}>
       <Input
         name="name"
         type="text"
