@@ -8,6 +8,7 @@ export interface InputProps {
   htmlFor: string;
   value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  required: boolean
 }
 
 export const Input = (props: InputProps) => {
@@ -19,7 +20,7 @@ export const Input = (props: InputProps) => {
           type={props.type}
           autoComplete={props.autoComplete}
           onChange={props.onChange}
-          required
+          required={props.required}
         />
         <label htmlFor={props.htmlFor}>{props.label}</label>
       </S.Container>

@@ -2,7 +2,6 @@ import * as S from "./styles";
 import { Logo } from "../Logo";
 interface FormProps {
   children: React.ReactNode;
-  onSubmit: (e: React.FormEvent) => void;
 }
 
 export const Form = ({ children }: FormProps) => {

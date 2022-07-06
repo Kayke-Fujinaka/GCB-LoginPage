@@ -3,7 +3,7 @@ import { Button } from "../Button";
 import theme from "../../styles/theme";
 
 let user = {
-  name: "João",
+  name: "Euuuu",
   password: "123",
 };
 

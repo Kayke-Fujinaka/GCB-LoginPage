@@ -10,14 +10,20 @@ export const RegisterForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
 
   function handleRegister() {
+    let usersList = JSON.parse(localStorage.getItem("usersList") || "[]");
+    usersList.push({
+      Name_LS: name,
+      Email_LS: email,
+      assword_LS: password,
+    });
 
+    localStorage.setItem("usersList", JSON.stringify(usersList));
   }
 
   return (
-    <Form onSubmit={handleRegister}>
+    <Form>
       <Input
         name="name"
         type="text"
@@ -25,7 +31,8 @@ export const RegisterForm = () => {
         htmlFor="name"
         label="Nome"
         value={name}
-        onChange={(e) => [setName(e.target.value), setError("")]}
+        onChange={(e) => setName(e.target.value)}
+        required
       />
       <Input
         name="email"
@@ -34,7 +41,8 @@ export const RegisterForm = () => {
         htmlFor="email"
         label="Email"
         value={email}
-        onChange={(e) => [setEmail(e.target.value), setError("")]}
+        onChange={(e) => setEmail(e.target.value)}
+        required
       />
       <Input
         name="password"
@@ -43,21 +51,10 @@ export const RegisterForm = () => {
         htmlFor="password"
         label="Senha"
         value={password}
-        onChange={(e) => [setPassword(e.target.value), setError("")]}
+        onChange={(e) => setPassword(e.target.value)}
+        required
       />
-      <div className="containerText">
-        <CheckBox
-          id="terms"
-          name="terms"
-          type="checkbox"
-          htmlFor="terms"
-          required
-          checked={true}
-        />
-      </div>
-      <Button type="submit" bgColor={theme.primaryColor} color={theme.button}>
-        Cadastrar
-      </Button>
+      <button onClick={handleRegister}>Osa</button>
     </Form>
   );
 };

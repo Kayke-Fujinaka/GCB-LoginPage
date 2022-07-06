@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import { Container } from "../components/Container";
 import { Content } from "../components/Content";
 import { Home } from "../components/Home";
 
-export default function HomePage() {
+export default function Login() {
   useEffect(() => {
     const res = localStorage.getItem("user");
     console.log(JSON.parse(res));
