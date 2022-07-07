@@ -3,17 +3,13 @@ import * as S from "./styles";
 export interface ButtonProps {
   children: React.ReactNode;
   type?: "button" | "submit";
-  bgColor?: string;
   color?: string;
+  bgColor?: string;
 }
 
 export function Button(props: ButtonProps) {
   return (
-    <S.Button
-      bgColor={props.bgColor}
-      color={props.color}
-      type={props.type}
-    >
+    <S.Button type={props.type} color={props.color} bgColor={props.bgColor}>
       {props.children}
     </S.Button>
   );

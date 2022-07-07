@@ -16,7 +16,8 @@ export const Container = styled.div`
     outline: none;
 
     :focus + label,
-    :valid + label {
+    :valid + label
+    {
       transform: translateY(-30px);
       font-size: 2rem;
       color: ${theme.label};

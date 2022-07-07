@@ -4,7 +4,7 @@ export interface LogoProps {
   src: string;
   alt: string;
   width: number;
-  height?: number;
+  height: number;
 }
 
 export const Logo = (props: LogoProps) => {

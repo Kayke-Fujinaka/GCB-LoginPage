@@ -7,7 +7,6 @@ import { CheckBox } from "../CheckBox";
 import { Button } from "../Button";
 
 import { checkPasswordValidation } from "../../utils/passwordValidator";
-
 import theme from "../../styles/theme";
 import { toast } from "react-toastify";
 
@@ -25,7 +24,7 @@ export const RegisterForm = () => {
   function handleRegister(e: React.FormEvent) {
     e.preventDefault();
 
-    let usersList = JSON.parse(localStorage.getItem("usersList") || "[]");
+    const usersList = JSON.parse(localStorage.getItem("usersList") || "[]");
     const user = {
       username: name,
       user_email: email,
@@ -33,34 +32,28 @@ export const RegisterForm = () => {
     };
 
     if (name === "") {
-      toast.error("Preencha o campo de Nome!");
-      return;
+      return toast.error("Preencha o campo de Nome!");
     }
 
     if (email === "") {
-      toast.error("Preencha o campo de Email!");
-      return;
+      return toast.error("Preencha o campo de Email!");
     }
 
     if (!EMAIL_REGEX.test(String(email).toLowerCase())) {
-      toast.error("Coloque um email válido");
-      return;
+      return toast.error("Coloque um email válido");
     }
 
     if (password === "") {
-      toast.error("Preencha o campo de senha");
-      return;
+      return toast.error("Preencha o campo de senha");
     }
 
-    const isValid = checkPasswordValidation(user.user_password);
-    if (!isValid.result) {
-      alert(isValid.errors);
-      return;
+    const isValidPassword = checkPasswordValidation(user.user_password);
+    if (!isValidPassword.result) {
+      return alert(isValidPassword.errors);
     }
 
     if (!checkbox) {
-      toast.error("Aceite os Termos de Uso");
-      return;
+      return toast.error("Aceite os Termos de Uso");
     }
 
     localStorage.setItem("usersList", JSON.stringify([...usersList, user]));
@@ -69,7 +62,7 @@ export const RegisterForm = () => {
   }
 
   return (
-    <Form handle={handleRegister}>
+    <Form onSubmit={handleRegister}>
       <Input
         name="name"
         type="text"
@@ -81,28 +74,26 @@ export const RegisterForm = () => {
       />
       <Input
         name="email"
-        type="text"
+        type="email"
+        value={email}
         autoComplete="off"
+        onChange={(e) => setEmail(e.target.value)}
         htmlFor="email"
         label="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
       />
       <Input
         name="password"
         type="password"
+        value={password}
         autoComplete="off"
+        onChange={(e) => setPassword(e.target.value)}
         htmlFor="password"
         label="Senha"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
       />
       <div className="containerText">
         <CheckBox
-          id="terms"
           name="terms"
           type="checkbox"
-          htmlFor="terms"
           onChange={(e) => setCheckbox(e.target.checked)}
         />
       </div>
