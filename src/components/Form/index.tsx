@@ -2,15 +2,16 @@ import * as S from "./styles";
 import { Logo } from "../Logo";
 interface FormProps {
   children: React.ReactNode;
+  handle: (e: React.FormEvent) => void;
 }
 
-export const Form = ({ children }: FormProps) => {
+export const Form = (props: FormProps) => {
   return (
-    <S.Container>
+    <S.Container onSubmit={props.handle}>
       <div className="logo">
         <Logo src="/logo-mobile.svg" alt="GCB Logo" width={420} height={120} />
       </div>
-      {children}
+      {props.children}
     </S.Container>
   );
 };

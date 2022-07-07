@@ -5,7 +5,6 @@ export interface ButtonProps {
   type?: "button" | "submit";
   bgColor?: string;
   color?: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export function Button(props: ButtonProps) {
@@ -14,7 +13,6 @@ export function Button(props: ButtonProps) {
       bgColor={props.bgColor}
       color={props.color}
       type={props.type}
-      onClick={props.onClick}
     >
       {props.children}
     </S.Button>
