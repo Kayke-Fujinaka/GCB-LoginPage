@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { LoginForm } from ".";
 
 export default {
-  title: "Login/Login",
+  title: "Pages/Login",
   component: LoginForm,
   parameters: {
     layout: "fullscreen",
@@ -27,11 +27,11 @@ export default {
 
 const Template: Story<typeof LoginForm> = (args) => <LoginForm />;
 
-export const LoginFormDesktop = Template.bind({});
-LoginFormDesktop.parameters = {
+export const Default = Template.bind({});
+Default.parameters = {
   backgrounds: { default: "desktop" },
 };
-LoginFormDesktop.decorators = [
+Default.decorators = [
   (Story) => {
     return (
       <div
@@ -49,14 +49,14 @@ LoginFormDesktop.decorators = [
   },
 ];
 
-export const LoginFormMobile = Template.bind({});
-LoginFormMobile.parameters = {
+export const Mobile = Template.bind({});
+Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },
   backgrounds: { default: "mobile" },
 };
-LoginFormMobile.decorators = [
+Mobile.decorators = [
   (Story) => {
     return (
       <div

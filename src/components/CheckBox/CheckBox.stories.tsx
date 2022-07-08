@@ -3,7 +3,7 @@ import { CheckBox, CheckBoxProps } from ".";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 export default {
-  title: "Checkboxs/Checkboxs",
+  title: "Components/Checkbox",
   component: CheckBox,
   argTypes: {
     checked: {
@@ -32,19 +32,15 @@ export default {
 
 const Template: Story<CheckBoxProps> = (args) => <CheckBox {...args} />;
 
-export const CheckboxDesktop = Template.bind({});
-CheckboxDesktop.args = {
-  id: "checkbox",
-  htmlFor: "checkbox",
+export const Default = Template.bind({});
+Default.args = {
   name: "checkbox",
-  checked: false,
   type: "checkbox",
-  required: true,
 };
-CheckboxDesktop.parameters = {
+Default.parameters = {
   backgrounds: { default: "desktop" },
 };
-CheckboxDesktop.decorators = [
+Default.decorators = [
   (Story) => {
     return (
       <div
@@ -61,22 +57,18 @@ CheckboxDesktop.decorators = [
   },
 ];
 
-export const CheckboxMobile = Template.bind({});
-CheckboxMobile.args = {
-  id: "checkbox",
-  htmlFor: "checkbox",
+export const Mobile = Template.bind({});
+Mobile.args = {
   name: "checkbox",
-  checked: false,
   type: "checkbox",
-  required: true,
 };
-CheckboxMobile.parameters = {
+Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },
   backgrounds: { default: "mobile" },
 };
-CheckboxMobile.decorators = [
+Mobile.decorators = [
   (Story) => {
     return (
       <div

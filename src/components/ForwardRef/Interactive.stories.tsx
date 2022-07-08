@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { ForwardRef, ForwardRefProps } from ".";
 
 export default {
-  title: "ForwardRefs/ForwardRef",
+  title: "Components/ForwardRef",
   component: ForwardRef,
   parameters: {
     layout: "fullscreen",
@@ -29,23 +29,23 @@ const Template: Story<ForwardRefProps> = (args) => (
   <ForwardRef {...args} />
 );
 
-export const ForwardRefDesktop = Template.bind({});
-ForwardRefDesktop.args = {
+export const Default = Template.bind({});
+Default.args = {
   text: "Você já tem uma conta? ",
   link: "#",
-  hyperlink: "Entre já!",
+  hyperLink: "Entre já!",
 };
-ForwardRefDesktop.parameters = {
+Default.parameters = {
   backgrounds: { default: "desktop" },
 };
 
-export const ForwardRefMobile = Template.bind({});
-ForwardRefMobile.args = {
+export const Mobile = Template.bind({});
+Mobile.args = {
   text: "Você já tem uma conta? ",
   link: "#",
-  hyperlink: "Entre já!",
+  hyperLink: "Entre já!",
 };
-ForwardRefMobile.parameters = {
+Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },

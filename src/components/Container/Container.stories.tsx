@@ -3,7 +3,7 @@ import { Container, ContainerProps } from ".";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 export default {
-  title: "Containers/Containers",
+  title: "Containers/Container",
   component: Container,
   parameters: {
     layout: "fullscreen",
@@ -27,13 +27,13 @@ export default {
 
 const Template: Story<ContainerProps> = (args) => <Container {...args} />;
 
-export const ContainerDesktop = Template.bind({});
-ContainerDesktop.parameters = {
+export const Default = Template.bind({});
+Default.parameters = {
   backgrounds: { default: "desktop" },
 };
 
-export const ContainerMobile = Template.bind({});
-ContainerMobile.parameters = {
+export const Mobile = Template.bind({});
+Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },

@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import { Logo } from "../Logo";
-interface FormProps {
+export interface FormProps {
   children: React.ReactNode;
   onSubmit?: (e: React.FormEvent) => void;
 }

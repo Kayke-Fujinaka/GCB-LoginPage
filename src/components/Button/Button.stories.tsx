@@ -4,7 +4,7 @@ import { Button, ButtonProps } from ".";
 import theme from "../../styles/theme";
 
 export default {
-  title: "Buttons/Button",
+  title: "Components/Button",
   component: Button,
   parameters: {
     layout: "fullscreen",
@@ -30,16 +30,16 @@ const Template: Story<ButtonProps> = (args) => (
   <Button {...args}>My Button</Button>
 );
 
-export const ButtonDesktop = Template.bind({});
-ButtonDesktop.args = {
+export const Default = Template.bind({});
+Default.args = {
   bgColor: theme.primaryColor,
   color: theme.button,
   type: "submit",
 };
-ButtonDesktop.parameters = {
+Default.parameters = {
   backgrounds: { default: "desktop" },
 };
-ButtonDesktop.decorators = [
+Default.decorators = [
   (Story) => {
     return (
       <div style={{ display: "flex", justifyContent: "center", height: "30rem", alignItems: "center" }}>
@@ -49,19 +49,19 @@ ButtonDesktop.decorators = [
   },
 ];
 
-export const ButtonMobile = Template.bind({});
-ButtonMobile.args = {
+export const Mobile = Template.bind({});
+Mobile.args = {
   color: theme.primaryColor,
   bgColor: theme.secondColor,
   type: "submit",
 };
-ButtonMobile.parameters = {
+Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },
   backgrounds: { default: "mobile" },
 };
-ButtonMobile.decorators = [
+Mobile.decorators = [
   (Story) => {
     return (
       <div style={{ display: "flex", justifyContent: "center", height: "30rem", alignItems: "center" }}>

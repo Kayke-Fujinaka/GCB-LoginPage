@@ -3,7 +3,7 @@ import { Logo, LogoProps } from ".";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 export default {
-  title: "Logos/Logo",
+  title: "Components/Logo",
   component: Logo,
   parameters: {
     layout: "fullscreen",
@@ -27,25 +27,25 @@ export default {
 
 const Template: Story<LogoProps> = (args) => <Logo {...args} />;
 
-export const LogoDesktop = Template.bind({});
-LogoDesktop.args = {
+export const Default = Template.bind({});
+Default.args = {
   src: "/logo-desktop.svg",
   alt: "Logo GCB Desktop",
   height: 120,
   width: 420,
 };
-LogoDesktop.parameters = {
+Default.parameters = {
   backgrounds: { default: "desktop" },
 };
 
-export const LogoMobile = Template.bind({});
-LogoMobile.args = {
+export const Mobile = Template.bind({});
+Mobile.args = {
   src: "/logo-mobile.svg",
   alt: "Logo GCB Mobile",
   height: 120,
   width: 420,
 };
-LogoMobile.parameters = {
+Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },

@@ -3,7 +3,7 @@ import { Input, InputProps } from ".";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 export default {
-  title: "Inputs/Inputs",
+  title: "Components/Input",
   component: Input,
   argTypes: {
     checked: {
@@ -32,15 +32,15 @@ export default {
 
 const Template: Story<InputProps> = (args) => <Input {...args} />;
 
-export const InputDesktop = Template.bind({});
-InputDesktop.args = {
+export const Default = Template.bind({});
+Default.args = {
   name: "Input",
   type: "Input",
   autoComplete: "off",
   label: "Email",
   htmlFor: "Email",
 };
-InputDesktop.decorators = [
+Default.decorators = [
   (Story) => {
     return (
       <div style={{ padding: "0 2rem" }}>
@@ -49,19 +49,19 @@ InputDesktop.decorators = [
     );
   },
 ];
-InputDesktop.parameters = {
+Default.parameters = {
   backgrounds: { default: "desktop" },
 };
 
-export const InputMobile = Template.bind({});
-InputMobile.args = {
+export const Mobile = Template.bind({});
+Mobile.args = {
   name: "Input",
   type: "Input",
   autoComplete: "off",
   label: "Email",
   htmlFor: "Email",
 };
-InputMobile.decorators = [
+Mobile.decorators = [
   (Story) => {
     return (
       <div style={{ padding: "0 2rem" }}>
@@ -70,7 +70,7 @@ InputMobile.decorators = [
     );
   },
 ];
-InputMobile.parameters = {
+Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },

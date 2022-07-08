@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { RegisterForm } from ".";
 
 export default {
-  title: "RegisterForms/RegisterForm",
+  title: "Pages/Register",
   component: RegisterForm,
   parameters: {
     layout: "fullscreen",
@@ -27,11 +27,11 @@ export default {
 
 const Template: Story<typeof RegisterForm> = (args) => <RegisterForm />;
 
-export const RegisterFormDesktop = Template.bind({});
-RegisterFormDesktop.parameters = {
+export const Default = Template.bind({});
+Default.parameters = {
   backgrounds: { default: "desktop" },
 };
-RegisterFormDesktop.decorators = [
+Default.decorators = [
   (Story) => {
     return (
       <div
@@ -49,14 +49,14 @@ RegisterFormDesktop.decorators = [
   },
 ];
 
-export const RegisterFormMobile = Template.bind({});
-RegisterFormMobile.parameters = {
+export const Mobile = Template.bind({});
+Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
   },
   backgrounds: { default: "mobile" },
 };
-RegisterFormMobile.decorators = [
+Mobile.decorators = [
   (Story) => {
     return (
       <div
