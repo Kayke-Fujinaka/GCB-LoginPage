@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { generateToken } from "../../utils/tokenGenerator";
 
 import { Form } from "../Form";
 import { Input } from "../Input";
@@ -34,7 +35,7 @@ export const LoginForm = () => {
       return toast.error("Preencha o campo de senha");
     }
 
-    const hasEmail = usersList.filter(
+    const hasEmail = usersList.find(
       (e: User) => e.user_email === email && e.user_password === password
     );
     if (!hasEmail) {
@@ -42,6 +43,7 @@ export const LoginForm = () => {
       return;
     } else {
       toast.success("Seja Bem Vindo!");
+      localStorage.setItem("token", generateToken(12));
       router.push("/");
     }
   }
@@ -50,20 +52,22 @@ export const LoginForm = () => {
     <Form onSubmit={handleLogin}>
       <Input
         name="email"
-        type="email"
-        value={email}
+        type="text"
         autoComplete="off"
+        value={email}
         onChange={(e) => setEmail(e.target.value)}
         htmlFor="email"
         label="Email"
+        placeholder="Email"
       />
       <Input
         name="password"
         type="password"
-        value={password}
         autoComplete="off"
+        value={password}
         onChange={(e) => setPassword(e.target.value)}
         htmlFor="password"
+        placeholder="Senha"
         label="Senha"
       />
       <div className="containerText">

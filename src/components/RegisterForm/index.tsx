@@ -67,17 +67,19 @@ export const RegisterForm = () => {
         name="name"
         type="text"
         autoComplete="off"
-        htmlFor="name"
-        label="Nome"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        placeholder="Nome"
+        htmlFor="name"
+        label="Nome"
       />
       <Input
         name="email"
-        type="email"
+        type="text"
         value={email}
         autoComplete="off"
         onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
         htmlFor="email"
         label="Email"
       />
@@ -87,6 +89,7 @@ export const RegisterForm = () => {
         value={password}
         autoComplete="off"
         onChange={(e) => setPassword(e.target.value)}
+        placeholder="Senha"
         htmlFor="password"
         label="Senha"
       />

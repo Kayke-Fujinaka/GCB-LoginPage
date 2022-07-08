@@ -15,7 +15,7 @@ export const Button = styled.button<ButtonProps>`
   font-family: ${theme.fonts.primary};
   color: ${(props) => props.color};
   background: ${(props) => props.bgColor};
-  border: 1px solid ${theme.primaryColor};
+  border: 0.1rem solid ${theme.primaryColor};
   border-radius: 1rem;
   transition: 0.5s;
 

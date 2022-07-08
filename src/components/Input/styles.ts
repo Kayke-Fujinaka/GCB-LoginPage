@@ -15,37 +15,31 @@ export const Container = styled.div`
     border-bottom: 0.1rem solid #423b32;
     outline: none;
 
-    :focus + label,
-    :valid + label
-    {
-      transform: translateY(-30px);
-      font-size: 2rem;
-      color: ${theme.label};
+    ::placeholder {
+      font-size: 1.6rem;
+      font-family: ${theme.fonts.primary};
+      color: ${theme.primaryColor};
+      opacity: 1;
       @media (max-width: 900px) {
-        top: 50%;
-        left: 47.5%;
-        margin: -25px 0 0 -25px;
-        color: ${theme.button};
+        color: ${theme.secondColor};
+        opacity: 0.8;
       }
     }
 
     @media (max-width: 900px) {
-      border-bottom: 1.25px solid ${theme.secondColor};
+      border-bottom: 0.125rem solid ${theme.secondColor};
       background: none;
       color: ${theme.secondColor};
     }
   }
 
   label {
-    position: absolute;
-    left: 0;
-    top: 0.5rem;
-    pointer-events: none;
-    transition: 0.5s;
-    font-size: 1.85rem;
-    color: ${theme.primaryColor};
+    display: flex;
+    font-size: 2rem;
+    color: ${theme.label};
     @media (max-width: 900px) {
-      color: ${theme.secondColor};
+      justify-content: center;
+      color: ${theme.button};
     }
   }
 `;

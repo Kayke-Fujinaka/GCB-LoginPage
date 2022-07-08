@@ -4,8 +4,10 @@ import theme from "../../styles/theme";
 export const Container = styled.form`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 480px;
+  min-height: 480px;
   padding: 2.5rem 3rem;
   border-radius: 1rem;
   background-color: ${theme.secondColor};
@@ -21,6 +23,7 @@ export const Container = styled.form`
     display: none;
     @media (max-width: 900px) {
       display: block;
+      margin-right: 4rem;
     }
   }
 
