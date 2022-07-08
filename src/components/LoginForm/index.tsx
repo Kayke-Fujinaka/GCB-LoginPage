@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import { generateToken } from "../../utils/tokenGenerator";
 
@@ -44,6 +44,7 @@ export const LoginForm = () => {
     } else {
       toast.success("Seja Bem Vindo!");
       localStorage.setItem("token", generateToken(12));
+      localStorage.setItem("email", email)
       router.push("/");
     }
   }

@@ -21,7 +21,7 @@ export const Span = styled.span`
   }
 
   p {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: ${theme.primaryColor};
     @media (max-width: 900px) {
       color: ${theme.secondColor};

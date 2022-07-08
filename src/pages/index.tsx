@@ -2,24 +2,32 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Container } from "../components/Container";
 import { Content } from "../components/Content";
-import { Home } from "../components/HomeForm";
+import { HomeForm } from "../components/HomeForm";
 
-export default function Login() {
-  const [user, setUser] = React.useState("");
-  const [email, setEmail] = React.useState("");
+interface User {
+  username: string;
+  user_email: string;
+  user_password: string;
+}
+
+export default function Home() {
+  const [user, setUser] = React.useState({
+    user_email: "",
+    username: "",
+  });
 
   const router = useRouter();
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("usersList") || "{}");
+    const listUsers = JSON.parse(localStorage.getItem("usersList") || "{}");
     const token = localStorage.getItem("token");
+    const email = localStorage.getItem("email");
 
-    if (!token) {
+    if (!token || !listUsers) {
       router.push("/login");
     } else {
-      const [{ username, user_email }] = user;
-      setUser(username);
-      setEmail(user_email);
+      const getUser = listUsers.find((e: User) => e.user_email === email);
+      setUser(getUser);
     }
   }, [router]);
 
@@ -31,7 +39,7 @@ export default function Login() {
         url="http://localhost:3000/"
       >
         <Content />
-        <Home username={user} user_email={email} />
+        <HomeForm username={user.username} user_email={user.user_email} />
       </Container>
     </>
   );
