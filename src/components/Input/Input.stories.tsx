@@ -1,6 +1,6 @@
 import { Story, ComponentMeta } from "@storybook/react";
-import { Input, InputProps } from ".";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { Input, InputProps } from ".";
 
 export default {
   title: "Components/Input",

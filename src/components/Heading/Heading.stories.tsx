@@ -6,6 +6,6 @@ export default {
   component: Heading,
 } as ComponentMeta<typeof Heading>;
 
-const Template: Story<typeof Heading> = (args) => <Heading />;
+const Template: Story<typeof Heading> = () => <Heading />;
 
 export const Default = Template.bind({});

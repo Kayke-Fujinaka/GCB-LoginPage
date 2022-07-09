@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
+import ls from "localstorage-slim";
 import { Container } from "../components/Container";
 import { Content } from "../components/Content";
 import { HomeForm } from "../components/HomeForm";
@@ -19,9 +20,11 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    const listUsers = JSON.parse(localStorage.getItem("usersList") || "{}");
-    const token = localStorage.getItem("token");
-    const email = localStorage.getItem("email");
+    const listUsers = JSON.parse(
+      ls.get("usersList", { decrypt: true }) || "{}"
+    );
+    const token = ls.get("token");
+    const email = ls.get("email", { decrypt: true });
 
     if (!token || !listUsers) {
       router.push("/login");

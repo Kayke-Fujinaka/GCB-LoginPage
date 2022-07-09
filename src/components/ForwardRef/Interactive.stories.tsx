@@ -25,9 +25,7 @@ export default {
   },
 } as ComponentMeta<typeof ForwardRef>;
 
-const Template: Story<ForwardRefProps> = (args) => (
-  <ForwardRef {...args} />
-);
+const Template: Story<ForwardRefProps> = (args) => <ForwardRef {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

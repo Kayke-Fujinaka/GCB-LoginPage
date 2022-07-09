@@ -1,6 +1,6 @@
 import { Story, ComponentMeta } from "@storybook/react";
-import { Container, ContainerProps } from ".";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { Container, ContainerProps } from ".";
 
 export default {
   title: "Containers/Container",

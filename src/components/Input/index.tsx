@@ -4,9 +4,9 @@ export interface InputProps {
   name: string;
   type: string;
   value: string;
+  placeholder: string;
   autoComplete: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
   htmlFor: string;
   label: string;
 }
@@ -20,9 +20,9 @@ export const Input = (props: InputProps) => {
           name={props.name}
           type={props.type}
           value={props.value}
+          placeholder={props.placeholder}
           autoComplete={props.autoComplete}
           onChange={props.onChange}
-          placeholder={props.placeholder}
         />
       </S.Container>
     </>

@@ -1,19 +1,24 @@
-import { Form } from "../Form";
 import { useRouter } from "next/router";
+import ls from "localstorage-slim";
+
+import { Form } from "../Form";
 import { Button } from "../Button";
-import theme from "../../styles/theme";
+
 import * as S from "./styles";
+import theme from "../../styles/theme";
 
 export interface HomeProps {
-    username: string;
-    user_email: string;
+  username: string;
+  user_email: string;
 }
 
 export const HomeForm = (props: HomeProps) => {
+  const keysToRemove = ["email", "token"];
+
   const router = useRouter();
 
   const handleLogout = (): void => {
-    localStorage.removeItem("token");
+    keysToRemove.forEach((k) => ls.remove(k));
     router.push("/login");
   };
 
@@ -23,11 +28,11 @@ export const HomeForm = (props: HomeProps) => {
         <S.Heading>Seja Bem Vindo ao Grupo GCB!</S.Heading>
         <S.Span>
           <p>
-            <span>Nome: </span> 
+            <span>Nome: </span>
             {props.username}
           </p>
           <p>
-            <span>Email: </span> 
+            <span>Email: </span>
             {props.user_email}
           </p>
         </S.Span>

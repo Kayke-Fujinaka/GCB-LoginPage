@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import ls from "localstorage-slim";
+import { toast } from "react-toastify";
 import { generateToken } from "../../utils/tokenGenerator";
 
 import { Form } from "../Form";
@@ -8,7 +10,6 @@ import { ForwardRef } from "../ForwardRef";
 import { Button } from "../Button";
 
 import theme from "../../styles/theme";
-import { toast } from "react-toastify";
 
 interface User {
   username: string;
@@ -25,17 +26,17 @@ export const LoginForm = () => {
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
 
-    const usersList = JSON.parse(localStorage.getItem("usersList") || "[]");
+    const getDecryptedUserList = JSON.parse(
+      ls.get("getDecryptedUserList", { decrypt: true }) || "[]"
+    );
 
-    if (email === "") {
-      return toast.error("Preencha o campo de Nome!");
+    const isFilledField = email === "" || password === "";
+
+    if (isFilledField) {
+      return toast.error("Preencha todos os campos");
     }
 
-    if (password === "") {
-      return toast.error("Preencha o campo de senha");
-    }
-
-    const hasEmail = usersList.find(
+    const hasEmail = getDecryptedUserList.find(
       (e: User) => e.user_email === email && e.user_password === password
     );
     if (!hasEmail) {
@@ -43,8 +44,10 @@ export const LoginForm = () => {
       return;
     } else {
       toast.success("Seja Bem Vindo!");
-      localStorage.setItem("token", generateToken(12));
-      localStorage.setItem("email", email)
+      ls.set("token", generateToken(12));
+      ls.set("email", email, {
+        encrypt: true,
+      });
       router.push("/");
     }
   }
@@ -54,24 +57,24 @@ export const LoginForm = () => {
       <Input
         name="email"
         type="text"
-        autoComplete="off"
         value={email}
+        placeholder="Email"
+        autoComplete="off"
         onChange={(e) => setEmail(e.target.value)}
         htmlFor="email"
         label="Email"
-        placeholder="Email"
       />
       <Input
         name="password"
         type="password"
-        autoComplete="off"
         value={password}
+        placeholder="Senha"
+        autoComplete="off"
         onChange={(e) => setPassword(e.target.value)}
         htmlFor="password"
-        placeholder="Senha"
         label="Senha"
       />
-      <div className="containerText">
+      <div className="containerForwardRef">
         <ForwardRef
           text="Não tem cadastro?&nbsp;"
           hyperLink="Cadastre-se agora!"

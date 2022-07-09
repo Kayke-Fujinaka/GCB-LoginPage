@@ -27,7 +27,7 @@ export const Container = styled.form`
     }
   }
 
-  .containerText {
+  .containerForwardRef {
     margin-block: 2rem 5rem;
   }
 `;

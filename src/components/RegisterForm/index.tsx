@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import ls from "localstorage-slim";
+import { toast } from "react-toastify";
+import { checkPasswordValidation } from "../../utils/passwordValidator";
 
 import { Form } from "../Form";
 import { Input } from "../Input";
 import { CheckBox } from "../CheckBox";
 import { Button } from "../Button";
 
-import { checkPasswordValidation } from "../../utils/passwordValidator";
 import theme from "../../styles/theme";
-import { toast } from "react-toastify";
 
 export const RegisterForm = () => {
   const [name, setName] = useState("");
@@ -16,35 +17,31 @@ export const RegisterForm = () => {
   const [password, setPassword] = useState("");
   const [checkbox, setCheckbox] = useState(false);
 
-  const router = useRouter();
-
   const EMAIL_REGEX =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+  const router = useRouter();
 
   function handleRegister(e: React.FormEvent) {
     e.preventDefault();
 
-    const usersList = JSON.parse(localStorage.getItem("usersList") || "[]");
+    const usersList = JSON.parse(
+      ls.get("usersList", { decrypt: true }) || "[]"
+    );
     const user = {
       username: name,
       user_email: email,
       user_password: password,
     };
 
-    if (name === "") {
-      return toast.error("Preencha o campo de Nome!");
-    }
-
-    if (email === "") {
-      return toast.error("Preencha o campo de Email!");
+    const isFilledField =
+      name === "" || email === "" || password === "" || !checkbox;
+    if (isFilledField) {
+      return toast.error("Preencha todos os campos!");
     }
 
     if (!EMAIL_REGEX.test(String(email).toLowerCase())) {
       return toast.error("Coloque um email válido");
-    }
-
-    if (password === "") {
-      return toast.error("Preencha o campo de senha");
     }
 
     const isValidPassword = checkPasswordValidation(user.user_password);
@@ -52,11 +49,9 @@ export const RegisterForm = () => {
       return alert(isValidPassword.errors);
     }
 
-    if (!checkbox) {
-      return toast.error("Aceite os Termos de Uso");
-    }
-
-    localStorage.setItem("usersList", JSON.stringify([...usersList, user]));
+    ls.set("usersList", JSON.stringify([...usersList, user]), {
+      encrypt: true,
+    });
     toast.success("Usuário cadastrado com sucesso");
     router.push("/login");
   }
@@ -66,10 +61,10 @@ export const RegisterForm = () => {
       <Input
         name="name"
         type="text"
-        autoComplete="off"
         value={name}
-        onChange={(e) => setName(e.target.value)}
         placeholder="Nome"
+        autoComplete="off"
+        onChange={(e) => setName(e.target.value)}
         htmlFor="name"
         label="Nome"
       />
@@ -77,9 +72,9 @@ export const RegisterForm = () => {
         name="email"
         type="text"
         value={email}
+        placeholder="Email"
         autoComplete="off"
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
         htmlFor="email"
         label="Email"
       />
@@ -87,20 +82,20 @@ export const RegisterForm = () => {
         name="password"
         type="password"
         value={password}
+        placeholder="Senha"
         autoComplete="off"
         onChange={(e) => setPassword(e.target.value)}
-        placeholder="Senha"
         htmlFor="password"
         label="Senha"
       />
-      <div className="containerText">
+      <div className="containerForwardRef">
         <CheckBox
           name="terms"
           type="checkbox"
           onChange={(e) => setCheckbox(e.target.checked)}
         />
       </div>
-      <Button bgColor={theme.primaryColor} color={theme.button} type="submit">
+      <Button type="submit" color={theme.button} bgColor={theme.primaryColor}>
         Cadastrar
       </Button>
     </Form>

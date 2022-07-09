@@ -1,5 +1,5 @@
-import * as S from "./styles";
 import { Logo } from "../Logo";
+import * as S from "./styles";
 export interface FormProps {
   children: React.ReactNode;
   onSubmit?: (e: React.FormEvent) => void;
