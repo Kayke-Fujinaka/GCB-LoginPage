@@ -27,6 +27,19 @@ export const Container = styled.form`
     }
   }
 
+  .containerPassword {
+    display: flex;
+    button {
+      display: flex;
+      align-items: center;
+      align-self: end;
+      justify-content: center;
+      width: 6rem;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
   .containerForwardRef {
     margin-block: 2rem 5rem;
   }

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import ls from "localstorage-slim";
 import { toast } from "react-toastify";
 import { checkPasswordValidation } from "../../utils/passwordValidator";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
 import { Form } from "../Form";
 import { Input } from "../Input";
@@ -15,6 +16,7 @@ export const RegisterForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [typePassword, setTypePassword] = useState("password");  
   const [checkbox, setCheckbox] = useState(false);
 
   const EMAIL_REGEX =
@@ -78,16 +80,25 @@ export const RegisterForm = () => {
         htmlFor="email"
         label="Email"
       />
-      <Input
-        name="password"
-        type="password"
-        value={password}
-        placeholder="Senha"
-        autoComplete="off"
-        onChange={(e) => setPassword(e.target.value)}
-        htmlFor="password"
-        label="Senha"
-      />
+      <div className="containerPassword">
+        <Input
+          name="password"
+          value={password}
+          type={typePassword}
+          placeholder="Senha"
+          autoComplete="off"
+          onChange={(e) => setPassword(e.target.value)}
+          htmlFor="password"
+          label="Senha"
+        />
+        <button type="button">
+          {typePassword === "password" ? (
+            <AiFillEyeInvisible size={25} onClick={() => setTypePassword("text")} />
+          ) : (
+            <AiFillEye size={25} onClick={() => setTypePassword("password")} />
+          )}
+        </button>
+      </div>
       <div className="containerForwardRef">
         <CheckBox
           name="terms"
