@@ -38,9 +38,8 @@ Default.decorators = [
         style={{
           display: "flex",
           justifyContent: "center",
-          height: "30rem",
           alignItems: "center",
-          paddingTop: "30rem",
+          paddingTop: "2.5rem",
         }}
       >
         <Story />
@@ -63,9 +62,8 @@ Mobile.decorators = [
         style={{
           display: "flex",
           justifyContent: "center",
-          height: "30rem",
           alignItems: "center",
-          marginTop: "20rem",
+          paddingTop: "2.5rem",
         }}
       >
         <Story />

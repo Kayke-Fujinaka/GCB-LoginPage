@@ -36,6 +36,7 @@ export const Default = Template.bind({});
 Default.args = {
   name: "Input",
   type: "Input",
+  placeholder: "Email",
   autoComplete: "off",
   label: "Email",
   htmlFor: "Email",
@@ -57,6 +58,7 @@ export const Mobile = Template.bind({});
 Mobile.args = {
   name: "Input",
   type: "Input",
+  placeholder: "Email",
   autoComplete: "off",
   label: "Email",
   htmlFor: "Email",
