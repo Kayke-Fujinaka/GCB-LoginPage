@@ -28,6 +28,10 @@ export default {
 const Template: Story<HomeProps> = (args) => <HomeForm {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  username: "kayke",
+  user_email: "kayke@gmail.com",
+};
 Default.parameters = {
   backgrounds: { default: "desktop" },
 };
@@ -50,6 +54,10 @@ Default.decorators = [
 ];
 
 export const Mobile = Template.bind({});
+Mobile.args = {
+  username: "kayke",
+  user_email: "kayke@gmail.com",
+};
 Mobile.parameters = {
   viewport: {
     defaultViewport: "iphonex",
