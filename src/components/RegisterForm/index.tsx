@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import ls from "localstorage-slim";
 import { toast } from "react-toastify";
@@ -57,13 +57,11 @@ export const RegisterForm = () => {
       return alert(isValidPassword.errors);
     }
 
-    // const hasEmail = usersList.find((e: User) => e.user_email === email);
-
-    // if (!hasEmail) {
-    //   return toast.error("Usuário já cadastrado!");
-    // }
-
-
+    for (let i = 0; i < usersList.length; i++) {
+      if (email === usersList[i].user_email) {
+        return toast.error("Usuário já existe!");
+      }
+    }
 
     ls.set("usersList", JSON.stringify([...usersList, user]), {
       encrypt: true,
@@ -71,7 +69,6 @@ export const RegisterForm = () => {
     toast.success("Usuário cadastrado com sucesso");
     router.push("/login");
   }
-
   return (
     <Form onSubmit={handleRegister}>
       <Input
