@@ -24,6 +24,7 @@ export const Container = styled.div`
       height: 0.8em;
       border-radius: 0.15em;
       margin-right: 0.5em;
+      margin-bottom: 1rem;
       border: 0.1em solid black;
       @media (max-width: 900px) {
         border: 0.1em solid white;
