@@ -4,14 +4,17 @@ export interface ForwardRefProps {
   text: string;
   hyperLink: string;
   link: string;
-};
+  handleShow?: () => void;
+}
 
 export const ForwardRef = (props: ForwardRefProps) => {
   return (
     <>
       <S.ForwardRef>
         {props.text}
-        <a href={props.link}>{props.hyperLink}</a>
+        <a href={props.link} onClick={props.handleShow}>
+          {props.hyperLink}
+        </a>
       </S.ForwardRef>
     </>
   );

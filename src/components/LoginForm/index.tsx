@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { generateToken } from "../../utils/tokenGenerator";
 import ls from "localstorage-slim";
 import { toast } from "react-toastify";
-import { generateToken } from "../../utils/tokenGenerator";
 
 import { Form } from "../Form";
 import { Input } from "../Input";
@@ -10,7 +10,6 @@ import { ForwardRef } from "../ForwardRef";
 import { Button } from "../Button";
 
 import theme from "../../styles/theme";
-
 interface User {
   username: string;
   user_email: string;
@@ -26,8 +25,8 @@ export const LoginForm = () => {
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
 
-    const getDecryptedUserList = JSON.parse(
-      ls.get("getDecryptedUserList", { decrypt: true }) || "[]"
+    const getDecryptedUsersList = JSON.parse(
+      ls.get("usersList", { decrypt: true }) || "[]"
     );
 
     const isFilledField = email === "" || password === "";
@@ -36,12 +35,11 @@ export const LoginForm = () => {
       return toast.error("Preencha todos os campos");
     }
 
-    const hasEmail = getDecryptedUserList.find(
+    const hasEmail = getDecryptedUsersList.find(
       (e: User) => e.user_email === email && e.user_password === password
     );
     if (!hasEmail) {
-      toast.error("Email ou senha inválidos");
-      return;
+      return toast.error("Email ou senha inválidos");
     } else {
       toast.success("Seja Bem Vindo!");
       ls.set("token", generateToken(12));
