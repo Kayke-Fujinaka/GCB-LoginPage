@@ -65,7 +65,7 @@ Mobile.decorators = [
           justifyContent: "center",
           height: "30rem",
           alignItems: "center",
-          paddingTop: "20rem",
+          marginTop: "20rem",
         }}
       >
         <Story />

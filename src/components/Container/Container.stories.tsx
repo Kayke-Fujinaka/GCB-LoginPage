@@ -28,9 +28,6 @@ export default {
 const Template: Story<ContainerProps> = (args) => <Container {...args} />;
 
 export const Default = Template.bind({});
-Default.parameters = {
-  backgrounds: { default: "desktop" },
-};
 
 export const Mobile = Template.bind({});
 Mobile.parameters = {

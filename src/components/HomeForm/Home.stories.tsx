@@ -31,6 +31,10 @@ export const Default = Template.bind({});
 Default.parameters = {
   backgrounds: { default: "desktop" },
 };
+Default.args = {
+  username: "Kayke Fujinaka",
+  user_email: "kayke@gmail.com",
+};
 Default.decorators = [
   (Story) => {
     return (
@@ -55,6 +59,10 @@ Mobile.parameters = {
     defaultViewport: "iphonex",
   },
   backgrounds: { default: "mobile" },
+};
+Mobile.args = {
+  username: "Kayke Fujinaka",
+  user_email: "kayke@gmail.com",
 };
 Mobile.decorators = [
   (Story) => {

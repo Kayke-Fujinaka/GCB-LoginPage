@@ -12,6 +12,12 @@ import { Button } from "../Button";
 
 import theme from "../../styles/theme";
 
+interface User {
+  username: string;
+  user_email: string;
+  user_password: string;
+}
+
 export const RegisterForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -50,6 +56,14 @@ export const RegisterForm = () => {
     if (!isValidPassword.result) {
       return alert(isValidPassword.errors);
     }
+
+    // const hasEmail = usersList.find((e: User) => e.user_email === email);
+
+    // if (!hasEmail) {
+    //   return toast.error("Usuário já cadastrado!");
+    // }
+
+
 
     ls.set("usersList", JSON.stringify([...usersList, user]), {
       encrypt: true,
