@@ -79,10 +79,15 @@ export const LoginForm = () => {
           {typePassword === "password" ? (
             <AiFillEyeInvisible
               size={25}
+              color={theme.label}
               onClick={() => setTypePassword("text")}
             />
           ) : (
-            <AiFillEye size={25} onClick={() => setTypePassword("password")} />
+            <AiFillEye
+              size={25}
+              color={theme.label}
+              onClick={() => setTypePassword("password")}
+            />
           )}
         </button>
       </div>

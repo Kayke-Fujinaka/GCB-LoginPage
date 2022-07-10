@@ -19,6 +19,11 @@ export const Container = styled.form`
     box-shadow: none;
   }
 
+  @media (max-width: 500px) {
+    max-width: 350px;
+    min-height: 350px;
+  }
+
   .logo {
     display: none;
     @media (max-width: 900px) {
@@ -29,6 +34,14 @@ export const Container = styled.form`
 
   .containerPassword {
     display: flex;
+    label {
+      @media (max-width: 900px) {
+        margin-left: 5.5rem;
+      }
+      @media (max-width: 500px) {
+        margin-left: 4rem;
+      }
+    }
     button {
       display: flex;
       align-items: center;

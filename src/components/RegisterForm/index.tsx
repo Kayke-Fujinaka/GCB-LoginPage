@@ -16,7 +16,7 @@ export const RegisterForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [typePassword, setTypePassword] = useState("password");  
+  const [typePassword, setTypePassword] = useState("password");
   const [checkbox, setCheckbox] = useState(false);
 
   const EMAIL_REGEX =
@@ -93,9 +93,17 @@ export const RegisterForm = () => {
         />
         <button type="button">
           {typePassword === "password" ? (
-            <AiFillEyeInvisible size={25} onClick={() => setTypePassword("text")} />
+            <AiFillEyeInvisible
+              size={25}
+              color={theme.label}
+              onClick={() => setTypePassword("text")}
+            />
           ) : (
-            <AiFillEye size={25} onClick={() => setTypePassword("password")} />
+            <AiFillEye
+              size={25}
+              color={theme.label}
+              onClick={() => setTypePassword("password")}
+            />
           )}
         </button>
       </div>

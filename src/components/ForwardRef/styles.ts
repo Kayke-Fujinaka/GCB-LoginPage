@@ -13,6 +13,7 @@ export const ForwardRef = styled.p`
 
   a {
     @media (max-width: 900px) {
+      word-break: break-word;;
       color: ${theme.secondColor};
     }
   }

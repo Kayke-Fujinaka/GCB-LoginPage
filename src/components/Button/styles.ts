@@ -7,7 +7,7 @@ export interface ButtonProps {
 }
 
 export const Button = styled.button<ButtonProps>`
-  width: 20rem;
+  width: 50%;
   height: 6rem;
   font-size: 2.2rem;
   font-weight: ${theme.fonts.weight.bold};
