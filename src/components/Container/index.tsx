@@ -5,7 +5,6 @@ export interface ContainerProps {
   children: React.ReactNode;
   title: string;
   description: string;
-  url: string;
 }
 
 export const Container = (props: ContainerProps) => {
@@ -16,7 +15,6 @@ export const Container = (props: ContainerProps) => {
         <meta name="description" content={props.description} />
         <meta property="og:title" content="GCB Investimentos" />
         <meta property="og:description" content={props.description} />
-        <meta property="og:url" content={props.url} />
         <meta property="og:type" content="website" />
         <link rel="icon" href="./favicon.ico" />
       </Head>

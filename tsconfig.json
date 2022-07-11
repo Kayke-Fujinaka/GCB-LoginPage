@@ -10,21 +10,12 @@
     "resolveJsonModule": true, // Possibilidade de importar arquivos JSON
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ], // Ele adiciona alguma funcionalidades. Exemplo: Entende que vai estar lidando com a DOM.
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Ele adiciona alguma funcionalidades. Exemplo: Entende que vai estar lidando com a DOM.
     "forceConsistentCasingInFileNames": true,
     "target": "es5",
     "incremental": true,
     "module": "esnext"
   },
-  "include": [
-    "src"
-  ] // Onde o código da aplicação vai estar
-  ,
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"], // Onde o código da aplicação vai estar
+  "exclude": ["node_modules"]
 }

@@ -7,7 +7,6 @@ export default function Login() {
       <Container
         title="GCB Investimentos - Login"
         description="Login Page"
-        url="http://localhost:3000/login"
       >
         <Content />
         <LoginForm />

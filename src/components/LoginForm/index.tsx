@@ -17,6 +17,11 @@ interface User {
   user_password: string;
 }
 
+interface FormData {
+  email: string;
+  password: string;
+}
+
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,25 +36,45 @@ export const LoginForm = () => {
       ls.get("usersList", { decrypt: true }) || "[]"
     );
 
-    const isFilledField = email === "" || password === "";
-
-    if (isFilledField) {
-      return toast.error("Preencha todos os campos");
-    }
-
     const hasEmail = getDecryptedUsersList.find(
       (e: User) => e.user_email === email && e.user_password === password
     );
-    if (!hasEmail) {
-      return toast.error("Email ou senha inválidos");
-    } else {
-      toast.success("Seja Bem Vindo!");
-      ls.set("token", generateToken(12));
-      ls.set("email", email, {
-        encrypt: true,
-      });
-      router.push("/");
-    }
+
+    const formDataValidators: Record<keyof FormData, (value: any) => boolean> =
+      {
+        email: (value) => {
+          if (value === "") {
+            toast.error("Preencha com um email existente");
+            return false;
+          }
+          return true;
+        },
+        password: (value) => {
+          if (value === "") {
+            toast.error("Preencha com uma senha existente");
+            return false;
+          }
+          if (!hasEmail) {
+            toast.error("Email ou senha inválidos");
+            return false;
+          }
+          toast.success("Seja Bem Vindo!");
+          ls.set("token", generateToken(12));
+          ls.set("email", email, {
+            encrypt: true,
+          });
+          router.push("/");
+          return true;
+        },
+      };
+
+    const isFormValid = (data: FormData): boolean => {
+      return Object.entries(data).reduce((acc, [k, v]) => {
+        return acc && formDataValidators[k as keyof FormData](v);
+      }, true);
+    };
+
+    isFormValid({ email, password });
   }
 
   return (
@@ -95,7 +120,7 @@ export const LoginForm = () => {
         <ForwardRef
           text="Não tem cadastro?&nbsp;"
           hyperLink="Cadastre-se agora!"
-          link="http://localhost:3000/register"
+          link="/register"
         />
       </div>
       <Button type="submit" color={theme.button} bgColor={theme.primaryColor}>

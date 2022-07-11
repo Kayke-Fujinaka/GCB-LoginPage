@@ -8,7 +8,6 @@ export default function Register() {
       <Container
         title="GCB Investimentos - Register"
         description="Register Page"
-        url="http://localhost:3000/register"
       >
         <Content />
         <RegisterForm />

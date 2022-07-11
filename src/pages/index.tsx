@@ -39,7 +39,6 @@ export default function Home() {
       <Container
         title="GCB Investimentos - Home"
         description="Home Page"
-        url="http://localhost:3000/"
       >
         <Content />
         <HomeForm username={user.username} user_email={user.user_email} />

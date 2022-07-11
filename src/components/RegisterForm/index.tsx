@@ -12,11 +12,12 @@ import { Button } from "../Button";
 
 import theme from "../../styles/theme";
 
-interface User {
-  username: string;
-  user_email: string;
-  user_password: string;
-}
+interface FormData {
+  name: string;
+  email: string;
+  password: string;
+  checkbox: boolean;
+};
 
 export const RegisterForm = () => {
   const [name, setName] = useState("");
@@ -42,32 +43,68 @@ export const RegisterForm = () => {
       user_password: password,
     };
 
-    const isFilledField =
-      name === "" || email === "" || password === "" || !checkbox;
-    if (isFilledField) {
-      return toast.error("Preencha todos os campos!");
-    }
-
-    if (!EMAIL_REGEX.test(String(email).toLowerCase())) {
-      return toast.error("Coloque um email válido");
-    }
-
     const isValidPassword = checkPasswordValidation(user.user_password);
-    if (!isValidPassword.result) {
-      return alert(isValidPassword.errors);
-    }
 
-    for (let i = 0; i < usersList.length; i++) {
-      if (email === usersList[i].user_email) {
-        return toast.error("Usuário já existe!");
-      }
-    }
+    const formDataValidators: Record<keyof FormData, (value: any) => boolean> =
+      {
+        name: (value) => {
+          if (value === "") {
+            toast.error("Insira um nome!");
+            return false;
+          }
+          return true;
+        },
+        email: (value) => {
+          if (value === "") {
+            toast.error("Preencha o campo de Email");
+            return false;
+          }
+          if (!EMAIL_REGEX.test(String(value).toLowerCase())) {
+            toast.error("Insira um email válido");
+            return false;
+          }
+          if (value) {
+            for (let i = 0; i < usersList.length; i++) {
+              if (value === usersList[i].user_email) {
+                toast.error("Usuário já existe!");
+                return false;
+              }
+            }
+          }
+          return true;
+        },
+        password: (value) => {
+          if (value === "") {
+            toast.error("Insira uma senha!");
+            return false;
+          }
+          if (!isValidPassword.result) {
+            alert(isValidPassword.errors);
+            return false;
+          }
+          return true;
+        },
+        checkbox: (value) => {
+          if (!value) {
+            toast.error("Aceite os termos de uso!");
+            return false;
+          }
+          ls.set("usersList", JSON.stringify([...usersList, user]), {
+            encrypt: true,
+          });
+          toast.success("Usuário cadastrado com sucesso");
+          router.push("/login");
+          return true;
+        },
+      };
 
-    ls.set("usersList", JSON.stringify([...usersList, user]), {
-      encrypt: true,
-    });
-    toast.success("Usuário cadastrado com sucesso");
-    router.push("/login");
+    const isFormValid = (data: FormData): boolean => {
+      return Object.entries(data).reduce((acc, [k, v]) => {
+        return acc && formDataValidators[k as keyof FormData](v);
+      }, true);
+    };
+
+    isFormValid({ name, email, password, checkbox });
   }
   return (
     <Form onSubmit={handleRegister}>
