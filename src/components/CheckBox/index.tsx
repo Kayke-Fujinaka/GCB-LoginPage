@@ -19,11 +19,7 @@ export const CheckBox = (props: CheckBoxProps) => {
   return (
     <>
       <S.Container>
-        <input
-          name={props.name}
-          type={props.type}
-          onChange={props.onChange}
-        />
+        <input name={props.name} type={props.type} onChange={props.onChange} />
         <label>
           <ForwardRef
             text="Eu li e aceito os "

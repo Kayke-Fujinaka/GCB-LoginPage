@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "../../components/Container";
 import { Content } from "../../components/Content";
 import { RegisterForm } from "../../components/RegisterForm";
