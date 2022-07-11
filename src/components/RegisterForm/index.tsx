@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import ls from "localstorage-slim";
 import { toast } from "react-toastify";
@@ -105,14 +105,14 @@ export const RegisterForm = () => {
         <button type="button">
           {typePassword === "password" ? (
             <AiFillEyeInvisible
+              className="eyeIcon"
               size={25}
-              color={theme.label}
               onClick={() => setTypePassword("text")}
             />
           ) : (
             <AiFillEye
+              className="eyeIcon"
               size={25}
-              color={theme.label}
               onClick={() => setTypePassword("password")}
             />
           )}

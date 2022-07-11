@@ -12,7 +12,7 @@ export const Container = styled.div`
     font-weight: ${theme.fonts.weight.normal};
     color: ${theme.primaryColor};
     border: none;
-    border-bottom: 0.1rem solid #423b32;
+    border-bottom: 0.1rem solid ${theme.primaryColor};
     outline: none;
 
     ::placeholder {
