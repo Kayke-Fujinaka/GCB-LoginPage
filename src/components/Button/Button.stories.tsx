@@ -42,7 +42,14 @@ Default.parameters = {
 Default.decorators = [
   (Story) => {
     return (
-      <div style={{ display: "flex", justifyContent: "center", height: "30rem", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "30rem",
+          alignItems: "center",
+        }}
+      >
         <Story />
       </div>
     );
@@ -64,7 +71,14 @@ Mobile.parameters = {
 Mobile.decorators = [
   (Story) => {
     return (
-      <div style={{ display: "flex", justifyContent: "center", height: "30rem", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "30rem",
+          alignItems: "center",
+        }}
+      >
         <Story />
       </div>
     );

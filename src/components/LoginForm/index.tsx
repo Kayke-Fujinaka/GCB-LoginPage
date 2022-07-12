@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { generateToken } from "../../utils/tokenGenerator";
-import ls from "localstorage-slim";
 import { toast } from "react-toastify";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
@@ -12,15 +11,20 @@ import { Button } from "../Button";
 
 import theme from "../../styles/theme";
 interface User {
-  username: string;
-  user_email: string;
-  user_password: string;
+  name: string;
+  email: string;
+  password: string;
 }
 
 interface FormData {
   email: string;
   password: string;
 }
+
+type ValidationProps = {
+  value?: string;
+  name: string;
+};
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -33,36 +37,34 @@ export const LoginForm = () => {
     e.preventDefault();
 
     const getDecryptedUsersList = JSON.parse(
-      ls.get("usersList", { decrypt: true }) || "[]"
+      localStorage.getItem("usersList") || "[]"
     );
 
     const hasEmail = getDecryptedUsersList.find(
-      (e: User) => e.user_email === email && e.user_password === password
+      (e: User) =>
+        e.email === email && window.atob(e.password) === password
     );
+
+    function verifyExists({ value, name }: ValidationProps) {
+      if (!value) {
+        toast.error(`Preencha com um ${name} existente`);
+        return false;
+      }
+      return true;
+    }
 
     const formDataValidators: Record<keyof FormData, (value: any) => boolean> =
       {
-        email: (value) => {
-          if (value === "") {
-            toast.error("Preencha com um email existente");
-            return false;
-          }
-          return true;
-        },
+        email: (value) => verifyExists({ value, name: "email" }),
         password: (value) => {
-          if (value === "") {
-            toast.error("Preencha com uma senha existente");
-            return false;
-          }
+          if (!verifyExists({ value, name: "senha" })) return false;
           if (!hasEmail) {
             toast.error("Email ou senha inválidos");
             return false;
           }
           toast.success("Seja Bem Vindo!");
-          ls.set("token", generateToken(12));
-          ls.set("email", email, {
-            encrypt: true,
-          });
+          localStorage.setItem("token", generateToken(12));
+          localStorage.setItem("email", email);
           router.push("/");
           return true;
         },

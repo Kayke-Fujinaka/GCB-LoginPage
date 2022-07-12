@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import ls from "localstorage-slim";
 import { toast } from "react-toastify";
 import { checkPasswordValidation } from "../../utils/passwordValidator";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
@@ -17,7 +16,7 @@ interface FormData {
   email: string;
   password: string;
   checkbox: boolean;
-};
+}
 
 export const RegisterForm = () => {
   const [name, setName] = useState("");
@@ -34,28 +33,27 @@ export const RegisterForm = () => {
   function handleRegister(e: React.FormEvent) {
     e.preventDefault();
 
-    const usersList = JSON.parse(
-      ls.get("usersList", { decrypt: true }) || "[]"
-    );
+    const usersList = JSON.parse(localStorage.getItem("usersList") || "[]");
+
     const user = {
-      username: name,
-      user_email: email,
-      user_password: password,
+      name: name,
+      email: email,
+      password: password,
     };
 
-    const isValidPassword = checkPasswordValidation(user.user_password);
+    const isValidPassword = checkPasswordValidation(user.password);
 
     const formDataValidators: Record<keyof FormData, (value: any) => boolean> =
       {
         name: (value) => {
-          if (value === "") {
+          if (!value) {
             toast.error("Insira um nome!");
             return false;
           }
           return true;
         },
         email: (value) => {
-          if (value === "") {
+          if (!value) {
             toast.error("Preencha o campo de Email");
             return false;
           }
@@ -65,7 +63,7 @@ export const RegisterForm = () => {
           }
           if (value) {
             for (let i = 0; i < usersList.length; i++) {
-              if (value === usersList[i].user_email) {
+              if (value === usersList[i].email) {
                 toast.error("Usuário já existe!");
                 return false;
               }
@@ -74,7 +72,7 @@ export const RegisterForm = () => {
           return true;
         },
         password: (value) => {
-          if (value === "") {
+          if (!value) {
             toast.error("Insira uma senha!");
             return false;
           }
@@ -89,9 +87,13 @@ export const RegisterForm = () => {
             toast.error("Aceite os termos de uso!");
             return false;
           }
-          ls.set("usersList", JSON.stringify([...usersList, user]), {
-            encrypt: true,
-          });
+          Object.assign(user, {
+            password: window.btoa(password)
+          })
+          localStorage.setItem(
+            "usersList",
+            JSON.stringify([...usersList, user])
+          );
           toast.success("Usuário cadastrado com sucesso");
           router.push("/login");
           return true;

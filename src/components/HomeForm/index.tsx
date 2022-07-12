@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import ls from "localstorage-slim";
 
 import { Form } from "../Form";
 import { Button } from "../Button";
@@ -8,8 +7,8 @@ import * as S from "./styles";
 import theme from "../../styles/theme";
 
 export interface HomeProps {
-  username: string;
-  user_email: string;
+  name: string;
+  email: string;
 }
 
 export const HomeForm = (props: HomeProps) => {
@@ -18,7 +17,7 @@ export const HomeForm = (props: HomeProps) => {
   const router = useRouter();
 
   const handleLogout = (): void => {
-    keysToRemove.forEach((k) => ls.remove(k));
+    keysToRemove.forEach((k) => localStorage.removeItem(k));
     router.push("/login");
   };
 
@@ -29,11 +28,11 @@ export const HomeForm = (props: HomeProps) => {
         <S.Span>
           <p>
             <span>Nome: </span>
-            {props.username}
+            {props.name}
           </p>
           <p>
             <span>Email: </span>
-            {props.user_email}
+            {props.email}
           </p>
         </S.Span>
         <Button

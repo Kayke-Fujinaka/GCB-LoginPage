@@ -29,15 +29,15 @@ const Template: Story<HomeProps> = (args) => <HomeForm {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  username: "kayke",
-  user_email: "kayke@gmail.com",
+  name: "kayke",
+  email: "kayke@gmail.com",
 };
 Default.parameters = {
   backgrounds: { default: "desktop" },
 };
 Default.args = {
-  username: "Kayke Fujinaka",
-  user_email: "kayke@gmail.com",
+  name: "Kayke Fujinaka",
+  email: "kayke@gmail.com",
 };
 Default.decorators = [
   (Story) => {
@@ -59,8 +59,8 @@ Default.decorators = [
 
 export const Mobile = Template.bind({});
 Mobile.args = {
-  username: "kayke",
-  user_email: "kayke@gmail.com",
+  name: "kayke",
+  email: "kayke@gmail.com",
 };
 Mobile.parameters = {
   viewport: {
@@ -69,8 +69,8 @@ Mobile.parameters = {
   backgrounds: { default: "mobile" },
 };
 Mobile.args = {
-  username: "Kayke Fujinaka",
-  user_email: "kayke@gmail.com",
+  name: "Kayke Fujinaka",
+  email: "kayke@gmail.com",
 };
 Mobile.decorators = [
   (Story) => {
