@@ -31,11 +31,11 @@ const Balls = styled.div`
   transform: translate(-50%, -50%);
 
   .ball {
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     border-radius: 50%;
     background: ${theme.button};
-    margin: 0 6px 0 0;
+    margin-right: 0.6rem;
     animation: oscillate 0.7s ease-in forwards infinite;
   }
 
@@ -54,7 +54,7 @@ const Balls = styled.div`
       transform: translateY(0);
     }
     50% {
-      transform: translateY(20px);
+      transform: translateY(2rem);
     }
     100% {
       transform: translateY(0);

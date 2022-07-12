@@ -16,15 +16,15 @@ interface User {
   password: string;
 }
 
+interface ValidationProps {
+  value?: string;
+  errorKeyName: string;
+}
+
 interface FormData {
   email: string;
   password: string;
 }
-
-type ValidationProps = {
-  value?: string;
-  name: string;
-};
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -36,29 +36,27 @@ export const LoginForm = () => {
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
 
-    const getDecryptedUsersList = JSON.parse(
-      localStorage.getItem("usersList") || "[]"
+    const usersList = JSON.parse(localStorage.getItem("usersList") || "[]");
+
+    const userExists = usersList.find(
+      (user: User) =>
+        user.email === email && window.atob(user.password) === password
     );
 
-    const hasEmail = getDecryptedUsersList.find(
-      (e: User) =>
-        e.email === email && window.atob(e.password) === password
-    );
-
-    function verifyExists({ value, name }: ValidationProps) {
+    function hasFieldFilled({ value, errorKeyName }: ValidationProps) {
       if (!value) {
-        toast.error(`Preencha com um ${name} existente`);
+        toast.error(`Preencha com um ${errorKeyName} existente`);
         return false;
       }
       return true;
     }
 
-    const formDataValidators: Record<keyof FormData, (value: any) => boolean> =
+    const formDataValidators: Record<keyof FormData, (value: string) => boolean> =
       {
-        email: (value) => verifyExists({ value, name: "email" }),
+        email: (value) => hasFieldFilled({ value, errorKeyName: "email" }),
         password: (value) => {
-          if (!verifyExists({ value, name: "senha" })) return false;
-          if (!hasEmail) {
+          if (!hasFieldFilled({ value, errorKeyName: "senha" })) return false;
+          if (!userExists) {
             toast.error("Email ou senha inválidos");
             return false;
           }

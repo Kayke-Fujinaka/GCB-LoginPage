@@ -49,16 +49,16 @@ export const Container = styled.form`
       justify-content: center;
       width: 6rem;
       border: none;
-      border-bottom: 1px solid ${theme.primaryColor};
+      border-bottom: 0.1rem solid ${theme.primaryColor};
       background-color: transparent;
       @media (max-width: 900px) {
-        border-bottom: 1px solid ${theme.secondColor};
+        border-bottom: 0.1rem solid ${theme.secondColor};
       }
       .eyeIcon {
         color: ${theme.label};
         @media (max-width: 900px) {
           color: ${theme.secondColor};
-      }
+        }
       }
     }
   }

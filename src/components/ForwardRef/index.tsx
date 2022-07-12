@@ -4,7 +4,7 @@ export interface ForwardRefProps {
   text: string;
   hyperLink: string;
   link: string;
-  handleShow?: () => void;
+  onClick?: () => void;
 }
 
 export const ForwardRef = (props: ForwardRefProps) => {
@@ -12,7 +12,7 @@ export const ForwardRef = (props: ForwardRefProps) => {
     <>
       <S.ForwardRef>
         {props.text}
-        <a href={props.link} onClick={props.handleShow}>
+        <a href={props.link} onClick={props.onClick}>
           {props.hyperLink}
         </a>
       </S.ForwardRef>
