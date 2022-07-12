@@ -13,57 +13,71 @@ export const Container = styled.form`
   background-color: ${theme.secondColor};
   box-shadow: 0 0.4rem 0.3rem rgba(0, 0, 0, 0.5);
 
-  @media (max-width: 900px) {
-    background: none;
-    min-height: 620px;
-    box-shadow: none;
-  }
-
-  @media (max-width: 500px) {
-    max-width: 350px;
-    min-height: 350px;
-  }
-
   .logo {
     display: none;
-    @media (max-width: 900px) {
-      display: block;
-      margin-right: 4rem;
-    }
   }
 
   .containerPassword {
     display: flex;
-    label {
-      @media (max-width: 900px) {
-        margin-left: 5.5rem;
-      }
-      @media (max-width: 500px) {
-        margin-left: 4rem;
-      }
+    justify-content: space-between;
+    border-bottom: 0.1rem solid ${theme.primaryColor};
+    input {
+      border: 0;
     }
+
     button {
-      display: flex;
-      align-items: center;
       align-self: end;
-      justify-content: center;
-      width: 6rem;
       border: none;
-      border-bottom: 0.1rem solid ${theme.primaryColor};
       background-color: transparent;
-      @media (max-width: 900px) {
-        border-bottom: 0.1rem solid ${theme.secondColor};
-      }
       .eyeIcon {
         color: ${theme.label};
-        @media (max-width: 900px) {
-          color: ${theme.secondColor};
-        }
       }
     }
   }
 
   .containerForwardRef {
     margin-block: 2rem 5rem;
+  }
+
+  @media (max-width: 900px) {
+    background: none;
+    min-height: 620px;
+    box-shadow: none;
+
+    .logo {
+      display: block;
+      margin-right: 4rem;
+    }
+
+    .containerPassword {
+      border-bottom: 0.1rem solid ${theme.secondColor};
+
+      input {
+        border: 0;
+      }
+
+      label {
+        justify-content: flex-end;
+      }
+
+      button {
+        border: 0;
+        .eyeIcon {
+          color: ${theme.secondColor};
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    max-width: 350px;
+    min-height: 350px;
+
+    .containerPassword {
+      label {
+        justify-content: center;
+        margin-left: 5rem;
+      }
+    }
   }
 `;

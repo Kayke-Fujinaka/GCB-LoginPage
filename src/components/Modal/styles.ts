@@ -16,12 +16,6 @@ export const Modal = styled.div`
     border-radius: 1.2rem;
     background-color: ${theme.secondColor};
     box-shadow: rgba(0, 0, 0, 0.35) 0 0.5rem 1.5rem;
-    @media (max-width: 500px) {
-      width: 35rem;
-    }
-    @media (max-width: 350px) {
-      width: 28rem;
-    }
 
     .title {
       text-align: center;
@@ -33,9 +27,6 @@ export const Modal = styled.div`
       margin-block: 2.5rem;
       font-size: 1.7rem;
       overflow-y: auto;
-      @media (max-width: 500px) {
-        font-size: 1.45rem;
-      }
     }
 
     .footer {
@@ -52,10 +43,21 @@ export const Modal = styled.div`
         border: none;
         border-radius: 0.8rem;
         cursor: pointer;
-        @media (max-width: 500px) {
-          font-size: 1.75rem;
-        }
       }
+    }
+
+    @media (max-width: 500px) {
+      width: 35rem;
+      .body {
+        font-size: 1.45rem;
+      }
+      .footer button {
+        font-size: 1.75rem;
+      }
+    }
+
+    @media (max-width: 350px) {
+      width: 28rem;
     }
   }
 

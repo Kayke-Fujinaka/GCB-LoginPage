@@ -22,19 +22,23 @@ export const Container = styled.div`
       content: "";
       width: 0.8em;
       height: 0.8em;
-      border-radius: 0.15em;
-      margin-right: 0.5em;
+      border-radius: 0.15rem;
+      margin-right: 0.5rem;
       align-items: center;
-      border: 0.1em solid black;
-      @media (max-width: 900px) {
-        border: 0.1em solid white;
-      }
+      border: 0.1rem solid black;
     }
   }
 
   input[type="checkbox"]:checked + label::before {
     background-color: ${theme.primaryColor};
-    @media (max-width: 900px) {
+  }
+
+  @media (max-width: 900px) {
+    label::before {
+      border: 0.1em solid white;
+    }
+
+    input[type="checkbox"]:checked + label::before {
       background-color: ${theme.secondColor};
     }
   }

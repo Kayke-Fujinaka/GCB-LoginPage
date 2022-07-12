@@ -7,9 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   gap: 5rem;
   color: ${theme.primaryColor};
-  @media (max-width: 900px) {
-    display: none;
-  }
+
   p {
     font-size: 2.5rem;
     font-weight: ${theme.fonts.weight.normal};
@@ -17,5 +15,9 @@ export const Container = styled.div`
     span {
       font-weight: ${theme.fonts.weight.semiBold};
     }
+  }
+  
+  @media (max-width: 900px) {
+    display: none;
   }
 `;

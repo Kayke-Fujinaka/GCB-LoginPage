@@ -5,6 +5,7 @@ export const Heading = styled.h1`
   text-align: center;
   font-size: 2.65rem;
   color: ${theme.primaryColor};
+  
   @media (max-width: 900px) {
     margin-top: 4rem;
     color: ${theme.secondColor};
@@ -16,21 +17,23 @@ export const Span = styled.span`
   flex-direction: column;
   margin-block: 2rem 4rem;
 
-  @media (max-width: 900px) {
-    text-align: center;
-  }
-
   p {
     font-size: 1.8rem;
     color: ${theme.primaryColor};
-    @media (max-width: 900px) {
-      color: ${theme.secondColor};
-    }
   }
 
   span {
     font-weight: ${theme.fonts.weight.semiBold};
-    @media (max-width: 900px) {
+  }
+
+  @media (max-width: 900px) {
+    text-align: center;
+
+    p {
+      color: ${theme.secondColor};
+    }
+    
+    span {
       color: ${theme.button};
     }
   }

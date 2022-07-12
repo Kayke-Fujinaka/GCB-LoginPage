@@ -20,16 +20,17 @@ export const Container = styled.div`
       font-family: ${theme.fonts.primary};
       color: ${theme.primaryColor};
       opacity: 1;
-      @media (max-width: 900px) {
-        color: ${theme.secondColor};
-        opacity: 0.8;
-      }
     }
 
     @media (max-width: 900px) {
       border-bottom: 0.125rem solid ${theme.secondColor};
       background: none;
       color: ${theme.secondColor};
+
+      ::placeholder {
+        color: ${theme.secondColor};
+        opacity: 0.8;
+      }
     }
   }
 
@@ -37,6 +38,7 @@ export const Container = styled.div`
     display: flex;
     font-size: 2rem;
     color: ${theme.label};
+
     @media (max-width: 900px) {
       justify-content: center;
       color: ${theme.button};
