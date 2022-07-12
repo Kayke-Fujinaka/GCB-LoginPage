@@ -7,7 +7,7 @@ export const Heading = styled.h1`
   font-size: 2.65rem;
   color: ${theme.primaryColor};
   
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     margin-top: 4rem;
     color: ${theme.secondColor};
   }
@@ -27,7 +27,7 @@ export const Span = styled.span`
     font-weight: ${theme.fonts.weight.semiBold};
   }
 
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     text-align: center;
 
     p {

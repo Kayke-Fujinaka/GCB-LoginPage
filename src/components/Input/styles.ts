@@ -23,7 +23,7 @@ export const Container = styled.div`
       opacity: 1;
     }
 
-    @media (max-width: ${devices.tablet}) {
+    @media (max-width: ${devices.mdl}) {
       border-bottom: 0.125rem solid ${theme.secondColor};
       background: none;
       color: ${theme.secondColor};
@@ -40,7 +40,7 @@ export const Container = styled.div`
     font-size: 2rem;
     color: ${theme.label};
 
-    @media (max-width: ${devices.tablet}) {
+    @media (max-width: ${devices.mdl}) {
       justify-content: center;
       color: ${theme.button};
     }

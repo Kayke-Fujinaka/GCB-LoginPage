@@ -2,7 +2,7 @@
 import { FiX } from "react-icons/fi";
 import * as S from "./styles";
 
-export const Modal = ({ setOpenModal }: any) => {
+export const Modal = ({setOpenModal}: any) => {
   return (
     <>
       <S.Modal>
@@ -28,12 +28,14 @@ export const Modal = ({ setOpenModal }: any) => {
               eu augue ut. Gravida neque convallis a cras semper auctor neque.
               Diam vulputate ut pharetra sit amet aliquam id.
             </p>
+            <br />
             <p>
               Enim praesent elementum facilisis leo vel fringilla est
               ullamcorper eget. Dolor sit amet consectetur adipiscing elit duis
               tristique. Purus non enim praesent elementum facilisis leo vel
               fringilla est. Sagittis purus sit amet volutpat.
             </p>
+            <br />
             <p>
               Urna nec tincidunt praesent semper feugiat nibh. Sagittis orci a
               scelerisque purus. Amet risus nullam eget felis. Feugiat vivamus
@@ -41,17 +43,20 @@ export const Modal = ({ setOpenModal }: any) => {
               euismod. Duis ut diam quam nulla porttitor massa id neque. Non
               enim praesent elementum facilisis.
             </p>
+            <br />
             <p>
               Nibh mauris cursus mattis molestie a. Quam nulla porttitor massa
               id. Auctor eu augue ut lectus. Quis risus sed vulputate odio.
               Massa vitae tortor condimentum lacinia quis vel eros. Et netus et
               malesuada fames ac turpis egestas maecenas pharetra.
             </p>
+            <br />
             <p>
               Placerat in egestas erat imperdiet sed euismod nisi porta lorem.
               In eu mi bibendum neque egestas congue quisque egestas diam. Purus
               semper eget duis at tellus at urna condimentum mattis.
             </p>
+            <br />
             <p>
               A scelerisque purus semper eget duis at tellus at. Vivamus at
               augue eget arcu dictum. Phasellus egestas tellus rutrum tellus

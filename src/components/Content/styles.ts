@@ -18,7 +18,7 @@ export const Container = styled.div`
     }
   }
   
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     display: none;
   }
 `;

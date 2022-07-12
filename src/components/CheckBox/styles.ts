@@ -34,7 +34,7 @@ export const Container = styled.div`
     background-color: ${theme.primaryColor};
   }
 
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     label::before {
       border: 0.1em solid white;
     }

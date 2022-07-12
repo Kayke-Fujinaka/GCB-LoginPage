@@ -14,7 +14,7 @@ export const Main = styled.main`
     width: 100%;
   }
 
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     background-color: ${theme.primaryColor};
   }
 `;

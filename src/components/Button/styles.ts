@@ -26,13 +26,13 @@ export const Button = styled.button<ButtonProps>`
     filter: contrast(125%);
   }
 
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     color: ${theme.primaryColor};
     background: ${theme.secondColor};
     margin: 0 auto;
   }
 
-  @media (max-width: ${devices.cellphone}) {
+  @media (max-width: ${devices.sm}) {
     font-size: 1.8rem;
     height: 5rem;
   }

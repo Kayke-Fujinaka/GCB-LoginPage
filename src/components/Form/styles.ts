@@ -40,7 +40,7 @@ export const Container = styled.form`
     margin-block: 2rem 5rem;
   }
 
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     background: none;
     min-height: 620px;
     box-shadow: none;
@@ -70,7 +70,7 @@ export const Container = styled.form`
     }
   }
 
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     max-width: 350px;
     min-height: 350px;
 

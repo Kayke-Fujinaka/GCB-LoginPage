@@ -7,7 +7,7 @@ export const ForwardRef = styled.p`
   font-weight: ${theme.fonts.weight.normal};
   color: ${theme.primaryColor};
 
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     color: ${theme.secondColor};
     a {
       word-break: break-word;
@@ -15,7 +15,7 @@ export const ForwardRef = styled.p`
     }
   }
 
-  @media (max-width: ${devices.tablet}) {
+  @media (max-width: ${devices.mdl}) {
     font-size: 1.6rem;
   }
 `;

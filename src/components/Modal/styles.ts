@@ -47,7 +47,7 @@ export const Modal = styled.div`
       }
     }
 
-    @media (max-width: ${devices.tablet}) {
+    @media (max-width: ${devices.mdl}) {
       width: 35rem;
       .body {
         font-size: 1.45rem;
@@ -57,7 +57,7 @@ export const Modal = styled.div`
       }
     }
 
-    @media (max-width: ${devices.smallCellphone}) {
+    @media (max-width: ${devices.xs}) {
       width: 28rem;
     }
   }

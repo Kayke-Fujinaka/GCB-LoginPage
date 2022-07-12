@@ -1,13 +1,13 @@
 interface DevicesProps {
-  tablet: string;
-  cellphone: string;
-  smallCellphone: string;
+  mdl: "900px";
+  sm: "500px";
+  xs: "350px";
 }
 
 const devices: DevicesProps = {
-  tablet: "900px",
-  cellphone: "500px",
-  smallCellphone: "350px",
+  mdl: "900px",
+  sm: "500px",
+  xs: "350px",
 };
 
 export default devices;
