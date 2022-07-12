@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
+import devices from "../../styles/devices";
 
 export const Container = styled.form`
   display: flex;
@@ -39,7 +40,7 @@ export const Container = styled.form`
     margin-block: 2rem 5rem;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: ${devices.tablet}) {
     background: none;
     min-height: 620px;
     box-shadow: none;
@@ -69,7 +70,7 @@ export const Container = styled.form`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: ${devices.tablet}) {
     max-width: 350px;
     min-height: 350px;
 

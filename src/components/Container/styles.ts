@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
+import devices from "../../styles/devices";
 
 export const Main = styled.main`
   display: flex;
@@ -13,7 +14,7 @@ export const Main = styled.main`
     width: 100%;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: ${devices.tablet}) {
     background-color: ${theme.primaryColor};
   }
 `;

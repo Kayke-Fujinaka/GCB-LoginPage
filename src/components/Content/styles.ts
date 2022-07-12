@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
+import devices from "../../styles/devices";
 
 export const Container = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ export const Container = styled.div`
     }
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: ${devices.tablet}) {
     display: none;
   }
 `;

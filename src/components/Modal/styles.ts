@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
+import devices from "../../styles/devices";
 
 export const Modal = styled.div`
   position: absolute;
@@ -46,7 +47,7 @@ export const Modal = styled.div`
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: ${devices.tablet}) {
       width: 35rem;
       .body {
         font-size: 1.45rem;
@@ -56,7 +57,7 @@ export const Modal = styled.div`
       }
     }
 
-    @media (max-width: 350px) {
+    @media (max-width: ${devices.smallCellphone}) {
       width: 28rem;
     }
   }

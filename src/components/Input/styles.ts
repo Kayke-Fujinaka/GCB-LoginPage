@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
+import devices from "../../styles/devices";
 
 export const Container = styled.div`
   position: relative;
@@ -22,7 +23,7 @@ export const Container = styled.div`
       opacity: 1;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: ${devices.tablet}) {
       border-bottom: 0.125rem solid ${theme.secondColor};
       background: none;
       color: ${theme.secondColor};
@@ -39,7 +40,7 @@ export const Container = styled.div`
     font-size: 2rem;
     color: ${theme.label};
 
-    @media (max-width: 900px) {
+    @media (max-width: ${devices.tablet}) {
       justify-content: center;
       color: ${theme.button};
     }

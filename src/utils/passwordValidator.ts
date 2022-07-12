@@ -4,7 +4,7 @@ const SPECIAL_CHARS =
 const MIN_LENGTH_CHARS = 8;
 const MAX_LENGTH_CHARS = 24;
 
-export type Response = {
+export interface Response {
   result: boolean;
   errors: string[];
 };

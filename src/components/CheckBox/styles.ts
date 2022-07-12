@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
+import devices from "../../styles/devices";
 
 export const Container = styled.div`
   display: flex;
@@ -33,7 +34,7 @@ export const Container = styled.div`
     background-color: ${theme.primaryColor};
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: ${devices.tablet}) {
     label::before {
       border: 0.1em solid white;
     }
