@@ -51,22 +51,24 @@ export const LoginForm = () => {
       return true;
     }
 
-    const formDataValidators: Record<keyof FormData, (value: string) => boolean> =
-      {
-        email: (value) => hasFieldFilled({ value, errorKeyName: "email" }),
-        password: (value) => {
-          if (!hasFieldFilled({ value, errorKeyName: "senha" })) return false;
-          if (!userExists) {
-            toast.error("Email ou senha inválidos");
-            return false;
-          }
-          toast.success("Seja Bem Vindo!");
-          localStorage.setItem("token", generateToken(12));
-          localStorage.setItem("email", email);
-          router.push("/");
-          return true;
-        },
-      };
+    const formDataValidators: Record<
+      keyof FormData,
+      (value: string) => boolean
+    > = {
+      email: (value) => hasFieldFilled({ value, errorKeyName: "email" }),
+      password: (value) => {
+        if (!hasFieldFilled({ value, errorKeyName: "senha" })) return false;
+        if (!userExists) {
+          toast.error("Email ou senha inválidos");
+          return false;
+        }
+        toast.success("Seja Bem Vindo!");
+        localStorage.setItem("token", generateToken(12));
+        localStorage.setItem("email", email);
+        router.push("/");
+        return true;
+      },
+    };
 
     const isFormValid = (data: FormData): boolean => {
       return Object.entries(data).reduce((acc, [k, v]) => {
