@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import devices from "../../styles/devices";
+import mediasQuery from "../../styles/mediasQuery";
 
 export const Container = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export const Container = styled.div`
     }
   }
   
-  @media (max-width: ${devices.mdl}) {
+  @media (max-width: ${mediasQuery.mdl}) {
     display: none;
   }
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import devices from "../../styles/devices";
+import mediasQuery from "../../styles/mediasQuery";
 
 export const Container = styled.div`
   position: relative;
@@ -23,7 +23,7 @@ export const Container = styled.div`
       opacity: 1;
     }
 
-    @media (max-width: ${devices.mdl}) {
+    @media (max-width: ${mediasQuery.mdl}) {
       border-bottom: 0.125rem solid ${theme.secondColor};
       background: none;
       color: ${theme.secondColor};
@@ -40,7 +40,7 @@ export const Container = styled.div`
     font-size: 2rem;
     color: ${theme.label};
 
-    @media (max-width: ${devices.mdl}) {
+    @media (max-width: ${mediasQuery.mdl}) {
       justify-content: center;
       color: ${theme.button};
     }

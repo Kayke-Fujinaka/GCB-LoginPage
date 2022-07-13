@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import devices from "../../styles/devices";
+import mediasQuery from "../../styles/mediasQuery";
 
 export const Main = styled.main`
   display: flex;
@@ -14,7 +14,7 @@ export const Main = styled.main`
     width: 100%;
   }
 
-  @media (max-width: ${devices.mdl}) {
+  @media (max-width: ${mediasQuery.mdl}) {
     background-color: ${theme.primaryColor};
   }
 `;

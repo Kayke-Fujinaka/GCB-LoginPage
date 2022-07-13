@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import devices from "../../styles/devices";
+import mediasQuery from "../../styles/mediasQuery";
 
 export const Modal = styled.div`
   position: absolute;
@@ -47,7 +47,7 @@ export const Modal = styled.div`
       }
     }
 
-    @media (max-width: ${devices.mdl}) {
+    @media (max-width: ${mediasQuery.mdl}) {
       width: 35rem;
       .body {
         font-size: 1.45rem;
@@ -57,7 +57,7 @@ export const Modal = styled.div`
       }
     }
 
-    @media (max-width: ${devices.xs}) {
+    @media (max-width: ${mediasQuery.xs}) {
       width: 28rem;
     }
   }

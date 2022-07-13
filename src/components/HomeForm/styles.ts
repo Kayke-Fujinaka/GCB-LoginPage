@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import devices from "../../styles/devices";
+import mediasQuery from "../../styles/mediasQuery";
 
 export const Heading = styled.h1`
   text-align: center;
   font-size: 2.65rem;
   color: ${theme.primaryColor};
   
-  @media (max-width: ${devices.mdl}) {
+  @media (max-width: ${mediasQuery.mdl}) {
     margin-top: 4rem;
     color: ${theme.secondColor};
   }
@@ -27,7 +27,7 @@ export const Span = styled.span`
     font-weight: ${theme.fonts.weight.semiBold};
   }
 
-  @media (max-width: ${devices.mdl}) {
+  @media (max-width: ${mediasQuery.mdl}) {
     text-align: center;
 
     p {

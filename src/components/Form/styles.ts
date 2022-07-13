@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import devices from "../../styles/devices";
+import mediasQuery from "../../styles/mediasQuery";
 
 export const Container = styled.form`
   display: flex;
@@ -40,7 +40,7 @@ export const Container = styled.form`
     margin-block: 2rem 5rem;
   }
 
-  @media (max-width: ${devices.mdl}) {
+  @media (max-width: ${mediasQuery.mdl}) {
     background: none;
     min-height: 620px;
     box-shadow: none;
@@ -70,7 +70,7 @@ export const Container = styled.form`
     }
   }
 
-  @media (max-width: ${devices.mdl}) {
+  @media (max-width: ${mediasQuery.mdl}) {
     max-width: 350px;
     min-height: 350px;
 

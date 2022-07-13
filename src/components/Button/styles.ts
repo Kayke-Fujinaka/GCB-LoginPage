@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import devices from "../../styles/devices";
+import mediasQuery from "../../styles/mediasQuery";
 
 export interface ButtonProps {
   bgColor?: string;
@@ -26,13 +26,13 @@ export const Button = styled.button<ButtonProps>`
     filter: contrast(125%);
   }
 
-  @media (max-width: ${devices.mdl}) {
+  @media (max-width: ${mediasQuery.mdl}) {
     color: ${theme.primaryColor};
     background: ${theme.secondColor};
     margin: 0 auto;
   }
 
-  @media (max-width: ${devices.sm}) {
+  @media (max-width: ${mediasQuery.sm}) {
     font-size: 1.8rem;
     height: 5rem;
   }

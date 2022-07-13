@@ -1,13 +1,13 @@
-interface DevicesProps {
+interface mediasQueryProps {
   mdl: "900px";
   sm: "500px";
   xs: "350px";
 }
 
-const devices: DevicesProps = {
+const mediasQuery: mediasQueryProps = {
   mdl: "900px",
   sm: "500px",
   xs: "350px",
 };
 
-export default devices;
+export default mediasQuery;

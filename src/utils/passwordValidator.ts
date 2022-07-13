@@ -20,31 +20,29 @@ export const checkPasswordValidation = (password: string): Response => {
     password.length > MAX_LENGTH_CHARS
   ) {
     response.result = false;
-    response.errors.push(`A senha deve conter de 8 a 24 caracteres`);
+    response.errors.push("A senha deve conter de 8 a 24 caracteres");
   }
 
   if (!digitValidation(password)) {
     response.result = false;
-    response.errors.push(`
-A senha deve conter pelo menos um algarismo`);
+    response.errors.push("A senha deve conter pelo menos um algarismo");
   }
 
   if (!specialCharsValidation(password)) {
     response.result = false;
-    response.errors.push(`
-A senha deve conter pelo menos um carácter especial`);
+    response.errors.push(
+      "A senha deve conter pelo menos um caractere especial"
+    );
   }
 
   if (!upperCaseValidation(password)) {
     response.result = false;
-    response.errors.push(`
-A senha deve conter pelo menos uma letra maiúscula`);
+    response.errors.push("A senha deve conter pelo menos uma letra maiúscula");
   }
 
   if (!lowerCaseValidation(password)) {
     response.result = false;
-    response.errors.push(`
-A senha deve conter pelo menos uma letra minúscula`);
+    response.errors.push("A senha deve conter pelo menos uma letra minúscula");
   }
 
   return response;
