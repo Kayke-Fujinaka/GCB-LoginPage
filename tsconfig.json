@@ -16,6 +16,6 @@
     "incremental": true,
     "module": "esnext"
   },
-  "include": ["src"], // Onde o código da aplicação vai estar
+  "include": ["src", "setup.ts"], // Onde o código da aplicação vai estar
   "exclude": ["node_modules"]
 }
