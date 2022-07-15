@@ -1,16 +1,11 @@
-const {defaults} = require('jest-config');
-
 module.exports = {
-  moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
-  roots: ["<rootDir>"],
-  testMatch: ['<rootDir>/src/**/?(*.)test.{ts,tsx}'],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
-  coverageDirectory: "coverage",
-  bail: true,
+  testPathIgnorePatters: ["/node_modules/", "/.next/"],
   collectCoverage: true,
-  clearMocks: true,
-  verbose: true,
-  setupFilesAfterEnv: ["<rootDir>jestSetup.ts"],
+  collectCoverageFrom: ["src/**/*.ts(x)?", "!src/**/*.stories.tsx"],
+  setupFilesAfterEnv: ["<rootDir>/.jest/setup.ts"],
+  modulePath: ["<rootDir>/src/"],
+  testEnvironment: "jsdom",
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": ["babel-jest", { presets: ["next/babel"] }],
+  },
 };
