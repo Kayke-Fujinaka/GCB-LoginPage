@@ -2,7 +2,11 @@
 import { FiX } from "react-icons/fi";
 import * as S from "./styles";
 
-export const Modal = ({setOpenModal}: any) => {
+interface ModalProps {
+  setOpenModal: (value: boolean) => void
+}
+
+export const Modal = (props: ModalProps) => {
   return (
     <>
       <S.Modal>
@@ -10,7 +14,7 @@ export const Modal = ({setOpenModal}: any) => {
           <div className="titleCloseBtn">
             <button
               onClick={() => {
-                setOpenModal(false);
+                props.setOpenModal(false);
               }}
             >
               <FiX size={25} />
@@ -67,7 +71,7 @@ export const Modal = ({setOpenModal}: any) => {
           <div className="footer">
             <button
               onClick={() => {
-                setOpenModal(false);
+                props.setOpenModal(false);
               }}
               type="button"
             >
