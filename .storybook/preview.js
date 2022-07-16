@@ -1,6 +1,5 @@
 import * as NextImage from "next/image";
 import GlobalStyle from "../src/styles/global";
-import { Container } from "../src/components/Container";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
