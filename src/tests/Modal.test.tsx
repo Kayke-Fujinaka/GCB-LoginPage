@@ -11,4 +11,11 @@ describe("Test Modal", () => {
     fireEvent.click(modalClose);
     expect(modalClose).toBeInTheDocument();
   });
+
+  test("Modal Close 2", async () => {
+    const { container } = render(<Modal setOpenModal={jest.fn} />);
+    const modalClose2 = container.querySelector("#buttonTop");
+    fireEvent.click(modalClose2)
+    expect(modalClose2).toBeInTheDocument();
+  });
 });

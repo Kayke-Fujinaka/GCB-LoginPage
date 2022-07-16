@@ -13,6 +13,7 @@ export const Modal = (props: ModalProps) => {
         <div className="modalContainer">
           <div className="titleCloseBtn">
             <button
+              id="buttonTop"
               onClick={() => {
                 props.setOpenModal(false);
               }}
