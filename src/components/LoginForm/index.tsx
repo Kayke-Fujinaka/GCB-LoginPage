@@ -30,7 +30,6 @@ export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [typePassword, setTypePassword] = useState("password");
-
   const router = useRouter();
 
   function handleLogin(e: React.FormEvent) {
@@ -87,6 +86,7 @@ export const LoginForm = () => {
         value={email}
         placeholder="Email"
         autoComplete="off"
+        id="email"
         onChange={(e) => setEmail(e.target.value)}
         htmlFor="email"
         label="Email"
@@ -98,6 +98,7 @@ export const LoginForm = () => {
           value={password}
           placeholder="Senha"
           autoComplete="off"
+          id="password"
           onChange={(e) => setPassword(e.target.value)}
           htmlFor="password"
           label="Senha"
@@ -105,14 +106,16 @@ export const LoginForm = () => {
         <button type="button">
           {typePassword === "password" ? (
             <AiFillEyeInvisible
-            className="eyeIcon"
+              className="eyeIcon"
               size={25}
+              data-testid="buttonEyeInvisiblePassword"
               onClick={() => setTypePassword("text")}
             />
           ) : (
             <AiFillEye
               size={25}
               className="eyeIcon"
+              data-testid="buttonEyeVisiblePassword"
               onClick={() => setTypePassword("password")}
             />
           )}

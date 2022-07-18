@@ -6,6 +6,7 @@ export interface InputProps {
   value: string;
   placeholder: string;
   autoComplete: string;
+  id: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   htmlFor: string;
   label: string;
@@ -22,6 +23,7 @@ export const Input = (props: InputProps) => {
           value={props.value}
           placeholder={props.placeholder}
           autoComplete={props.autoComplete}
+          id={props.id}
           onChange={props.onChange}
         />
       </S.Container>
