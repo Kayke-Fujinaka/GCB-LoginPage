@@ -166,8 +166,8 @@ describe("Test Login Form", () => {
 
     expect(emailInput).not.toHaveValue(user.email);
     expect(passwordInput).toHaveValue(user.password);
-  });
-
+  })
+  
   test("Eye Password Insivible", async () => {
     const { getByTestId, getByPlaceholderText } = render(<LoginForm />);
     const buttonEyeInvisible = getByTestId("buttonEyeInvisiblePassword");
