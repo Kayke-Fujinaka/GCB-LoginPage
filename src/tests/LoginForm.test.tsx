@@ -1,7 +1,6 @@
 import React from "react";
-import { render, fireEvent, waitFor, screen } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 import { LoginForm } from "../components/LoginForm";
-import { toast } from "react-toastify";
 
 const mockRouterPush = jest.fn();
 jest.mock("next/router", () => ({

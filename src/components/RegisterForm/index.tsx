@@ -67,12 +67,10 @@ export const RegisterForm = () => {
           toast.error("Insira um email válido");
           return false;
         }
-        if (value) {
-          for (let i = 0; i < usersList.length; i++) {
-            if (value === usersList[i].email) {
-              toast.error("Usuário já existe!");
-              return false;
-            }
+        for (let i = 0; i < usersList.length; i++) {
+          if (value === usersList[i].email) {
+            toast.error("Usuário já existe!");
+            return false;
           }
         }
         return true;
@@ -147,6 +145,7 @@ export const RegisterForm = () => {
         <button type="button">
           {typePassword === "password" ? (
             <AiFillEyeInvisible
+              data-testid="buttonEyeInvisiblePassword"
               className="eyeIcon"
               size={25}
               onClick={() => setTypePassword("text")}
@@ -154,6 +153,7 @@ export const RegisterForm = () => {
           ) : (
             <AiFillEye
               className="eyeIcon"
+              data-testid="buttonEyeVisiblePassword"
               size={25}
               onClick={() => setTypePassword("password")}
             />
