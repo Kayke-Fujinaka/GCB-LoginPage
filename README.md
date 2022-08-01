@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">🐂 GCB Login Page</h1>
 
-## Getting Started
+<img src="./public/img.jpeg" alt="Descrição da imagem">
 
-First, run the development server:
+> 🔎 Um site de registro/login baseado na GCB
+
+Confira a aplicação: https://gcb-login-page.vercel.app/login <br>
+
+## :page_facing_up: Explicação
+
+O site foi realizado em um desafio passado para os Academy do Grupo GCB.
+
+Nele foi instruido a fazer uma página de login que armazena os dados no Local Storage encriptado, além de possuir o storybook dos componentes e testes unitários.
+
+## 📁 Páginas
+
+O site tem no total 3 páginas, sendo elas:
+
+- **Login:** Página de Login.
+- **Registro:** Página de Registro.
+- **Home:** Página principal após ser logado.
+
+## ⚔️ Desafio
+
+Nesse desafio, você deve construir um site que irá simular todo um fluxo de Login.
+:heavy_check_mark: Utilizar NextJs\
+:heavy_check_mark: Salvar dados no LocalStorage\
+:heavy_check_mark: Validação do Email\
+:heavy_check_mark: Validação da senha\
+:heavy_check_mark: Usar Storybook\
+--- ⚙️ Extra ---\
+:heavy_check_mark: Implementação de testes unitários\
+:heavy_check_mark: Encriptando os dados salvos no Local Storage\
+:heavy_check_mark: Implementar Object Literal\
+:heavy_check_mark: Esconder e aparecer a senha\
+:heavy_check_mark: Modal de termos de uso\
+:heavy_check_mark: Gerador de Token\
+:heavy_check_mark: Dados aparecem na página de Home
+
+## 🚀 Tecnologias
+
+- [Typescript](https://www.typescriptlang.org/docs/)
+- [NextJs](https://nextjs.org/docs)
+- [React Icon](https://react-icons.github.io/react-icons/)
+- [React Toastify](https://www.npmjs.com/package/react-toastify)
+- [Styled Components](https://styled-components.com/)
+- [Jest](https://jestjs.io/pt-BR/docs/getting-started)
+- [Testing Library](https://testing-library.com/)
+- [Storybook](https://storybook.js.org/)
+- [Eslint](https://eslint.org/)
+- [Babel](https://babeljs.io/)
+
+## :closed_book: Como usar?
+
+Antes de iniciar, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone this project
+$ git clone https://github.com/Kayke-Fujinaka/GCB-LoginPage
+# Access
+$ cd NOME DA SUA PASTA
+# Install dependencies
+$ yarn or npm
+# Run the project
+$ yarn start or npm start
+# The server will initialize in the <http://localhost:3000>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Colaboradores
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <sub>
+          <b>Kayke Fujinaka</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a href="#top">Volte para o topo</a>
