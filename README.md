@@ -58,7 +58,7 @@ Antes de iniciar, você precisa ter [Git](https://git-scm.com) e [Node](https://
 # Clone this project
 $ git clone https://github.com/Kayke-Fujinaka/GCB-LoginPage
 # Access
-$ cd NOME DA SUA PASTA
+$ cd gcb-loginpage
 # Install dependencies
 $ yarn or npm
 # Run the project
