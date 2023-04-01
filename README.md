@@ -1,43 +1,43 @@
 <h1 align="center">🐂 GCB Login Page</h1>
 
-<img src="./public/img.jpeg" alt="Descrição da imagem">
+<img src="./public/img.jpeg" alt="Image description">
 
-> 🔎 Um site de registro/login baseado na GCB
+> 🔎 A GCB-based registration/login site
 
-Confira a aplicação: https://gcb-login-page.vercel.app/login <br>
+Check out the app: https://gcb-login-page.vercel.app/login <br>
 
-## :page_facing_up: Explicação
+## :page_facing_up: Explanation
 
-O site foi realizado em um desafio passado para os Academy do Grupo GCB.
+The site was created in a past challenge for the Academy of the GCB Group.
 
-Nele foi instruido a fazer uma página de login que armazena os dados no Local Storage encriptado, além de possuir o storybook dos componentes e testes unitários.
+In it, he was instructed to make a login page that stores the data in encrypted Local Storage, in addition to having the storybook of the components and unit tests.
 
-## 📁 Páginas
+## 📁 Pages
 
-O site tem no total 3 páginas, sendo elas:
+The site has a total of 3 pages, namely:
 
-- **Login:** Página de Login.
-- **Registro:** Página de Registro.
-- **Home:** Página principal após ser logado.
+- **Login:** Login page.
+- **Registration:** Registration page.
+- **Home:** Main page after being logged in.
 
-## ⚔️ Desafio
+## ⚔️ Challenge
 
-Nesse desafio, você deve construir um site que irá simular todo um fluxo de Login.
-:heavy_check_mark: Utilizar NextJs\
-:heavy_check_mark: Salvar dados no LocalStorage\
-:heavy_check_mark: Validação do Email\
-:heavy_check_mark: Validação da senha\
-:heavy_check_mark: Usar Storybook\
+In this challenge, you must build a website that will simulate an entire Login flow.
+:heavy_check_mark: Use NextJs\
+:heavy_check_mark: Save data to LocalStorage\
+:heavy_check_mark: Email Validation\
+:heavy_check_mark: Password validation\
+:heavy_check_mark: Use Storybook\
 --- ⚙️ Extra ---\
-:heavy_check_mark: Implementação de testes unitários\
-:heavy_check_mark: Encriptando os dados salvos no Local Storage\
-:heavy_check_mark: Implementar Object Literal\
-:heavy_check_mark: Esconder e aparecer a senha\
-:heavy_check_mark: Modal de termos de uso\
-:heavy_check_mark: Gerador de Token\
-:heavy_check_mark: Dados aparecem na página de Home
+:heavy_check_mark: Unit test implementation\
+:heavy_check_mark: Encrypting data saved to Local Storage\
+:heavy_check_mark: Implement Object Literal\
+:heavy_check_mark: Hide and show password\
+:heavy_check_mark: Terms of use modal\
+:heavy_check_mark: Token Generator\
+:heavy_check_mark: Data appears on Home page
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 - [Typescript](https://www.typescriptlang.org/docs/)
 - [NextJs](https://nextjs.org/docs)
@@ -50,37 +50,37 @@ Nesse desafio, você deve construir um site que irá simular todo um fluxo de Lo
 - [Eslint](https://eslint.org/)
 - [Babel](https://babeljs.io/)
 
-## :closed_book: Como usar?
+## :closed_book: How to use it?
 
-Antes de iniciar, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
+Before starting, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
 ```bash
 # Clone this project
 $ git clone https://github.com/Kayke-Fujinaka/GCB-LoginPage
-# Access
+# access
 $ cd gcb-loginpage
-# Install dependencies
+# install dependencies
 $ yarn or npm
 # Run the project
 $ yarn start or npm start
 # The server will initialize in the <http://localhost:3000>
 ```
 
-## 🤝 Colaboradores
+## 🤝 Collaborators
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+Thanks to the following people who contributed to this project:
 
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Photo by Kayke Fujinaka on GitHub"/><br>
         <sub>
           <b>Kayke Fujinaka</b>
         </sub>
       </a>
-    </td>
+    </all>
   </tr>
 </table>
 
-<a href="#top">Volte para o topo</a>
+<a href="#top">Go back to top</a>
